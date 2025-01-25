@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { heroImages } from "../assets/hero/heroImages.js"; // Import images
-import prevIcon from "../assets/hero/icons/leftArrow.png"; // Import previous button icon
-import nextIcon from "../assets/hero/icons/rightArrow.png"; // Import next button icon
+import { heroImages } from "../assets/Hero/heroImages.js"; // Import images
+import prevIcon from "../assets/Hero/icons/leftArrow.png"; // Import previous button icon
+import nextIcon from "../assets/Hero/icons/rightArrow.png"; // Import next button icon
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
