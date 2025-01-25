@@ -4,16 +4,14 @@ const Footer = () => {
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-12 md:space-y-0">
         {/* Logo Section */}
         <div className="flex justify-center md:justify-start">
-          <img
-            src="/assets/logo.png" // Replace with your logo path
-            alt="Mechanic Co. Logo"
-            className="w-32 h-auto"
-          />
+          <img src="/logo.svg" alt="pelles auto logo" className="w-32 h-auto" />
         </div>
 
         {/* Contact Info Section */}
         <div className="flex flex-col items-center text-center md:text-left md:items-start">
-          <h3 className="text-xl font-semibold mb-4 text-gray-300">Contact Us</h3>
+          <h3 className="text-xl font-semibold mb-4 text-gray-300">
+            Contact Us
+          </h3>
           <div className="space-y-2">
             <p className="text-sm">
               <strong>Our Address:</strong>
@@ -32,7 +30,9 @@ const Footer = () => {
 
         {/* Shop Hours Section */}
         <div className="flex flex-col items-center text-center md:text-left md:items-start">
-          <h3 className="text-xl font-semibold mb-4 text-gray-300">Shop Hours</h3>
+          <h3 className="text-xl font-semibold mb-4 text-gray-300">
+            Shop Hours
+          </h3>
           <div className="space-y-2">
             <p className="text-sm">
               <strong>Monday - Friday:</strong> 8:00am - 5:00pm
@@ -59,7 +59,8 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="text-center mt-12 text-gray-500 text-sm">
         <p>
-          &copy; {new Date().getFullYear()} Pelle's Automotive All Rights Reserved.
+          &copy; {new Date().getFullYear()} Pelle's Automotive All Rights
+          Reserved.
         </p>
       </div>
     </footer>
