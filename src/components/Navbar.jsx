@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -11,13 +11,16 @@ const Navbar = () => {
 
   // Close the menu when clicking outside
   const handleClickOutside = (event) => {
-    if (!event.target.closest(".mobile-menu")) {
+    if (
+      !event.target.closest(".mobile-menu") &&
+      !event.target.closest(".md:hidden")
+    ) {
       setIsMenuOpen(false);
     }
   };
 
   // Add event listener to close menu when clicking outside
-  React.useEffect(() => {
+  useEffect(() => {
     if (isMenuOpen) {
       document.body.addEventListener("click", handleClickOutside);
     }
@@ -25,6 +28,11 @@ const Navbar = () => {
       document.body.removeEventListener("click", handleClickOutside);
     };
   }, [isMenuOpen]);
+
+  // Close the menu when the close button is clicked
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <nav className="bg-gray-800 text-white p-4 sticky top-0 z-50">
@@ -38,7 +46,11 @@ const Navbar = () => {
         </Link>
 
         {/* Hamburger Menu Icon */}
-        <button className="md:hidden flex items-center" onClick={toggleMenu}>
+        <button
+          className="md:hidden flex items-center"
+          onClick={toggleMenu}
+          aria-label="Toggle Menu"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-6 h-6"
@@ -93,9 +105,18 @@ const Navbar = () => {
       >
         {/* Menu Content */}
         <div
-          className="mobile-menu w-full h-full flex justify-center items-center"
+          className="mobile-menu w-full h-full flex justify-center items-center relative"
           onClick={(e) => e.stopPropagation()} // Prevent closing menu if clicking inside
         >
+          {/* Close Button */}
+          <button
+            className="absolute top-4 right-4 text-white text-3xl"
+            onClick={closeMenu}
+          >
+            &times;
+          </button>
+
+          {/* Menu Links */}
           <ul className="space-y-6 text-center text-white">
             <li>
               <Link to="/" className="hover:underline block text-2xl">
