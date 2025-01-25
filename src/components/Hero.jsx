@@ -53,12 +53,12 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-30 flex flex-col items-center justify-center h-full px-4 text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white leading-tight">
-          Welcome to <span className="text-blue-500">Pelle's Automotive</span>
+          Welcome to <span className="text-gray-800">Pelle's Automotive</span>
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl mb-8 text-gray-300">
           Professional car repair services you can trust.
         </p>
-        <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold cursor-pointer transition duration-300 ease-in-out transform hover:scale-105">
+        <button className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold cursor-pointer transition duration-300 ease-in-out transform hover:scale-105">
           Book an Appointment
         </button>
       </div>
@@ -68,21 +68,13 @@ const Hero = () => {
         onClick={handlePrev}
         className="absolute left-5 sm:left-8 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-3 sm:p-4 rounded-full z-30 hidden sm:block"
       >
-        <img
-          src={prevIcon}
-          alt="Previous"
-          className="w-6 h-6 sm:w-8 sm:h-8"
-        />
+        <img src={prevIcon} alt="Previous" className="w-6 h-6 sm:w-8 sm:h-8" />
       </button>
       <button
         onClick={handleNext}
         className="absolute right-5 sm:right-8 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-3 sm:p-4 rounded-full z-30 hidden sm:block"
       >
-        <img
-          src={nextIcon}
-          alt="Next"
-          className="w-6 h-6 sm:w-8 sm:h-8"
-        />
+        <img src={nextIcon} alt="Next" className="w-6 h-6 sm:w-8 sm:h-8" />
       </button>
 
       {/* Dots Navigation */}
