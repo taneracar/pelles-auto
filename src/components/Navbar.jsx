@@ -41,7 +41,7 @@ const Navbar = () => {
           <img
             src="/logo.svg"
             alt="Pelle's Auto Logo"
-            className="h-12 w-auto"
+            style={{ height: "50px", width: "auto" }} // Adjust logo size here
           />
         </Link>
 

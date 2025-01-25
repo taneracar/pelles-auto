@@ -10,7 +10,7 @@ const Footer = () => {
             <img
               src="/logo.svg"
               alt="Pelle's Auto Logo"
-              className="w-32 h-auto"
+              className="w-60 h-auto"
             />
           </Link>
         </div>
