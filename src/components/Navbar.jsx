@@ -2,7 +2,11 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-800 text-white p-4 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
-        <img src="../../public/logo.png" alt="pelles auto logo" />
+        <img
+          src="../../public/logo.svg"
+          alt="pelles auto logo"
+          className="h-12 w-auto"
+        />
         <ul className="flex space-x-4">
           <li>
             <a href="/" className="hover:underline">
