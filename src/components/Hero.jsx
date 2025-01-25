@@ -53,7 +53,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-30 flex flex-col items-center justify-center h-full px-4 text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white leading-tight">
-          Welcome to <span className="text-gray-800">Pelle's Automotive</span>
+          Welcome to Pelle's Automotive
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl mb-8 text-gray-300">
           Professional car repair services you can trust.

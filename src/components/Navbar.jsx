@@ -67,13 +67,18 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu with Full-Screen and Opacity */}
       <div
         className={`${
           isMenuOpen ? "block" : "hidden"
-        } md:hidden absolute left-0 top-16 w-full bg-gray-800 p-4`}
+        } md:hidden absolute left-0 top-0 w-full h-full bg-gray-800 bg-opacity-75 p-4`}
       >
-        <ul className="space-y-4 text-center">
+        <div className="flex justify-end">
+          <button onClick={toggleMenu} className="text-white text-2xl">
+            &times; {/* Close button */}
+          </button>
+        </div>
+        <ul className="space-y-4 text-center text-white">
           <li>
             <Link to="/" className="hover:underline block">
               Home
