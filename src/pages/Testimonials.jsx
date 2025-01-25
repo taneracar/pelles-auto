@@ -86,10 +86,13 @@ const Testimonials = () => {
         <div className="text-center mt-12">
           <p className="text-xl text-gray-700">
             To see more reviews and customer experiences, visit our{" "}
-            <a href="/testimonials" className="text-blue-500 hover:underline">
+            <a
+              href="https://www.surecritic.com/reviews/pelles-automotive?nhd=1"
+              target="_blank"
+              className="text-blue-500 hover:underline"
+            >
               SureCritic Pelle's Automotive Testimonial page.
             </a>
-            .
           </p>
         </div>
       </div>
