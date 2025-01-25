@@ -4,9 +4,27 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Toggle the menu open/close state
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  // Close the menu when clicking outside
+  const handleClickOutside = (event) => {
+    if (!event.target.closest(".mobile-menu")) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  // Add event listener to close menu when clicking outside
+  React.useEffect(() => {
+    if (isMenuOpen) {
+      document.body.addEventListener("click", handleClickOutside);
+    }
+    return () => {
+      document.body.removeEventListener("click", handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   return (
     <nav className="bg-gray-800 text-white p-4 sticky top-0 z-50">
@@ -37,7 +55,7 @@ const Navbar = () => {
           </svg>
         </button>
 
-        {/* Navigation Links */}
+        {/* Navigation Links (Desktop) */}
         <ul className={`${isMenuOpen ? "block" : "hidden"} md:flex space-x-4`}>
           <li>
             <Link to="/" className="hover:underline">
@@ -67,44 +85,45 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Mobile Menu with Full-Screen and Opacity */}
+      {/* Mobile Menu with Full-Screen Backdrop */}
       <div
         className={`${
           isMenuOpen ? "block" : "hidden"
-        } md:hidden absolute left-0 top-0 w-full h-full bg-gray-800 bg-opacity-75 p-4`}
+        } fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-40`}
       >
-        <div className="flex justify-end">
-          <button onClick={toggleMenu} className="text-white text-2xl">
-            &times; {/* Close button */}
-          </button>
+        {/* Menu Content */}
+        <div
+          className="mobile-menu w-full h-full flex justify-center items-center"
+          onClick={(e) => e.stopPropagation()} // Prevent closing menu if clicking inside
+        >
+          <ul className="space-y-6 text-center text-white">
+            <li>
+              <Link to="/" className="hover:underline block text-2xl">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/testimonials" className="hover:underline block text-2xl">
+                Testimonials
+              </Link>
+            </li>
+            <li>
+              <Link to="/services" className="hover:underline block text-2xl">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link to="/coupons" className="hover:underline block text-2xl">
+                Coupons
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:underline block text-2xl">
+                Contact
+              </Link>
+            </li>
+          </ul>
         </div>
-        <ul className="space-y-4 text-center text-white">
-          <li>
-            <Link to="/" className="hover:underline block">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/testimonials" className="hover:underline block">
-              Testimonials
-            </Link>
-          </li>
-          <li>
-            <Link to="/services" className="hover:underline block">
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link to="/coupons" className="hover:underline block">
-              Coupons
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="hover:underline block">
-              Contact
-            </Link>
-          </li>
-        </ul>
       </div>
     </nav>
   );
