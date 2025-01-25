@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -103,7 +103,10 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/testimonials" className="hover:underline block text-2xl">
+              <Link
+                to="/testimonials"
+                className="hover:underline block text-2xl"
+              >
                 Testimonials
               </Link>
             </li>
