@@ -34,6 +34,11 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
+  // Scroll to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <nav className="bg-gray-800 text-white p-4 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
@@ -70,7 +75,14 @@ const Navbar = () => {
         {/* Navigation Links (Desktop) */}
         <ul className={`${isMenuOpen ? "block" : "hidden"} md:flex space-x-4`}>
           <li>
-            <Link to="/" className="hover:underline" onClick={closeMenu}>
+            <Link
+              to="/"
+              className="hover:underline"
+              onClick={() => {
+                closeMenu();
+                scrollToTop();
+              }}
+            >
               Home
             </Link>
           </li>
@@ -78,7 +90,10 @@ const Navbar = () => {
             <Link
               to="/testimonials"
               className="hover:underline"
-              onClick={closeMenu}
+              onClick={() => {
+                closeMenu();
+                scrollToTop();
+              }}
             >
               Testimonials
             </Link>
@@ -87,18 +102,35 @@ const Navbar = () => {
             <Link
               to="/services"
               className="hover:underline"
-              onClick={closeMenu}
+              onClick={() => {
+                closeMenu();
+                scrollToTop();
+              }}
             >
               Services
             </Link>
           </li>
           <li>
-            <Link to="/coupons" className="hover:underline" onClick={closeMenu}>
+            <Link
+              to="/coupons"
+              className="hover:underline"
+              onClick={() => {
+                closeMenu();
+                scrollToTop();
+              }}
+            >
               Coupons
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="hover:underline" onClick={closeMenu}>
+            <Link
+              to="/contact"
+              className="hover:underline"
+              onClick={() => {
+                closeMenu();
+                scrollToTop();
+              }}
+            >
               Contact
             </Link>
           </li>
@@ -130,7 +162,10 @@ const Navbar = () => {
               <Link
                 to="/"
                 className="hover:underline block text-2xl"
-                onClick={closeMenu}
+                onClick={() => {
+                  closeMenu();
+                  scrollToTop();
+                }}
               >
                 Home
               </Link>
@@ -139,7 +174,10 @@ const Navbar = () => {
               <Link
                 to="/testimonials"
                 className="hover:underline block text-2xl"
-                onClick={closeMenu}
+                onClick={() => {
+                  closeMenu();
+                  scrollToTop();
+                }}
               >
                 Testimonials
               </Link>
@@ -148,7 +186,10 @@ const Navbar = () => {
               <Link
                 to="/services"
                 className="hover:underline block text-2xl"
-                onClick={closeMenu}
+                onClick={() => {
+                  closeMenu();
+                  scrollToTop();
+                }}
               >
                 Services
               </Link>
@@ -157,7 +198,10 @@ const Navbar = () => {
               <Link
                 to="/coupons"
                 className="hover:underline block text-2xl"
-                onClick={closeMenu}
+                onClick={() => {
+                  closeMenu();
+                  scrollToTop();
+                }}
               >
                 Coupons
               </Link>
@@ -166,7 +210,10 @@ const Navbar = () => {
               <Link
                 to="/contact"
                 className="hover:underline block text-2xl"
-                onClick={closeMenu}
+                onClick={() => {
+                  closeMenu();
+                  scrollToTop();
+                }}
               >
                 Contact
               </Link>
