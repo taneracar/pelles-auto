@@ -59,7 +59,12 @@ const Hero = () => {
           Professional car repair services you can trust.
         </p>
         <button className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold cursor-pointer transition duration-300 ease-in-out transform hover:scale-105">
-          Book an Appointment
+          <a
+            href="http://www.mitchell1crm.com/crmutilities/RequestAppointment.aspx?x=4473&v=ShopWebsite"
+            target="_blank"
+          >
+            Book an Appointment
+          </a>
         </button>
       </div>
 

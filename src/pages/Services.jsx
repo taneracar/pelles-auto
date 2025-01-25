@@ -137,7 +137,8 @@ const Services = () => {
           Need an appointment or more information? We are here to help!
         </p>
         <a
-          href="/appointment"
+          href="http://www.mitchell1crm.com/crmutilities/RequestAppointment.aspx?x=4473&v=ShopWebsite"
+          target="_blank"
           className="px-6 py-3 bg-blue-600 text-white rounded-full text-lg hover:bg-blue-700 transition duration-300"
         >
           Schedule an Appointment
