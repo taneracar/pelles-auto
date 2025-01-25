@@ -1,32 +1,43 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <nav className="bg-gray-800 text-white p-4 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
-        <img
-          src="/logo.svg"
-          alt="pelles auto logo"
-          className="h-12 w-auto"
-        />
+        <Link to="/">
+          <img
+            src="/logo.svg"
+            alt="Pelle's Auto Logo"
+            className="h-12 w-auto"
+          />
+        </Link>
+
+        {/* Navigation Links */}
         <ul className="flex space-x-4">
           <li>
-            <a href="/" className="hover:underline">
+            <Link to="/" className="hover:underline">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/about" className="hover:underline">
-              About
-            </a>
+            <Link to="/testimonials" className="hover:underline">
+              Testimonials
+            </Link>
           </li>
           <li>
-            <a href="/services" className="hover:underline">
+            <Link to="/services" className="hover:underline">
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/contact" className="hover:underline">
+            <Link to="/coupons" className="hover:underline">
+              Coupons
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="hover:underline">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

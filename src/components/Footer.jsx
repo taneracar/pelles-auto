@@ -1,10 +1,18 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-12 px-4 md:px-16">
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-12 md:space-y-0">
         {/* Logo Section */}
         <div className="flex justify-center md:justify-start">
-          <img src="/logo.svg" alt="pelles auto logo" className="w-32 h-auto" />
+          <Link to="/">
+            <img
+              src="/logo.svg"
+              alt="Pelle's Auto Logo"
+              className="w-32 h-auto"
+            />
+          </Link>
         </div>
 
         {/* Contact Info Section */}
