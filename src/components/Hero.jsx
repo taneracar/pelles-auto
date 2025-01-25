@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { heroImages } from "../assets/hero/heroImages"; // Import images
+import { heroImages } from "../assets/hero/heroImages.js"; // Import images
 import prevIcon from "../assets/hero/icons/leftArrow.png"; // Import previous button icon
 import nextIcon from "../assets/hero/icons/rightArrow.png"; // Import next button icon
 
