@@ -41,14 +41,17 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.3 }}
             className="w-full h-full object-cover"
           />
         </AnimatePresence>
       </div>
 
+      {/* Darker Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/90 z-20"></div>
+
       {/* Content */}
-      <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center">
+      <div className="relative z-30 flex flex-col items-center justify-center h-full px-4 text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white leading-tight">
           Welcome to <span className="text-blue-500">Pelle's Automotive</span>
         </h1>
@@ -65,13 +68,21 @@ const Hero = () => {
         onClick={handlePrev}
         className="absolute left-5 sm:left-8 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-3 sm:p-4 rounded-full z-30 hidden sm:block"
       >
-        <img src={prevIcon} alt="Previous" className="w-6 h-6 sm:w-8 sm:h-8" />
+        <img
+          src={prevIcon}
+          alt="Previous"
+          className="w-6 h-6 sm:w-8 sm:h-8"
+        />
       </button>
       <button
         onClick={handleNext}
         className="absolute right-5 sm:right-8 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-3 sm:p-4 rounded-full z-30 hidden sm:block"
       >
-        <img src={nextIcon} alt="Next" className="w-6 h-6 sm:w-8 sm:h-8" />
+        <img
+          src={nextIcon}
+          alt="Next"
+          className="w-6 h-6 sm:w-8 sm:h-8"
+        />
       </button>
 
       {/* Dots Navigation */}
