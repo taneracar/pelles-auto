@@ -70,27 +70,35 @@ const Navbar = () => {
         {/* Navigation Links (Desktop) */}
         <ul className={`${isMenuOpen ? "block" : "hidden"} md:flex space-x-4`}>
           <li>
-            <Link to="/" className="hover:underline">
+            <Link to="/" className="hover:underline" onClick={closeMenu}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/testimonials" className="hover:underline">
+            <Link
+              to="/testimonials"
+              className="hover:underline"
+              onClick={closeMenu}
+            >
               Testimonials
             </Link>
           </li>
           <li>
-            <Link to="/services" className="hover:underline">
+            <Link
+              to="/services"
+              className="hover:underline"
+              onClick={closeMenu}
+            >
               Services
             </Link>
           </li>
           <li>
-            <Link to="/coupons" className="hover:underline">
+            <Link to="/coupons" className="hover:underline" onClick={closeMenu}>
               Coupons
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="hover:underline">
+            <Link to="/contact" className="hover:underline" onClick={closeMenu}>
               Contact
             </Link>
           </li>
@@ -119,7 +127,11 @@ const Navbar = () => {
           {/* Menu Links */}
           <ul className="space-y-6 text-center text-white">
             <li>
-              <Link to="/" className="hover:underline block text-2xl">
+              <Link
+                to="/"
+                className="hover:underline block text-2xl"
+                onClick={closeMenu}
+              >
                 Home
               </Link>
             </li>
@@ -127,22 +139,35 @@ const Navbar = () => {
               <Link
                 to="/testimonials"
                 className="hover:underline block text-2xl"
+                onClick={closeMenu}
               >
                 Testimonials
               </Link>
             </li>
             <li>
-              <Link to="/services" className="hover:underline block text-2xl">
+              <Link
+                to="/services"
+                className="hover:underline block text-2xl"
+                onClick={closeMenu}
+              >
                 Services
               </Link>
             </li>
             <li>
-              <Link to="/coupons" className="hover:underline block text-2xl">
+              <Link
+                to="/coupons"
+                className="hover:underline block text-2xl"
+                onClick={closeMenu}
+              >
                 Coupons
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:underline block text-2xl">
+              <Link
+                to="/contact"
+                className="hover:underline block text-2xl"
+                onClick={closeMenu}
+              >
                 Contact
               </Link>
             </li>
