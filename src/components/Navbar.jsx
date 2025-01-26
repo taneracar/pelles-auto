@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gray-800 text-white sticky top-0 z-50">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center sm:px-0">
         <Link to="/" onClick={scrollToTop}>
           <img
             src="/logo.svg"
@@ -53,7 +53,7 @@ const Navbar = () => {
 
         {/* Hamburger Menu Icon */}
         <button
-          className="md:hidden flex items-center"
+          className="md:hidden flex items-center px-5"
           onClick={toggleMenu}
           aria-label="Toggle Menu"
         >
@@ -74,31 +74,11 @@ const Navbar = () => {
         </button>
 
         {/* Navigation Links (Desktop) */}
-        <ul className={`${isMenuOpen ? "block" : "hidden"} md:flex space-x-4 px-4`}>
-          <li>
-            <Link
-              to="/"
-              className="hover:underline"
-              onClick={() => {
-                closeMenu();
-                scrollToTop();
-              }}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/testimonials"
-              className="hover:underline"
-              onClick={() => {
-                closeMenu();
-                scrollToTop();
-              }}
-            >
-              Testimonials
-            </Link>
-          </li>
+        <ul
+          className={`${
+            isMenuOpen ? "block" : "hidden"
+          } md:flex space-x-4 px-4`}
+        >
           <li>
             <Link
               to="/services"
@@ -113,18 +93,6 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="/coupons"
-              className="hover:underline"
-              onClick={() => {
-                closeMenu();
-                scrollToTop();
-              }}
-            >
-              Coupons
-            </Link>
-          </li>
-          <li>
-            <Link
               to="/contact"
               className="hover:underline"
               onClick={() => {
@@ -135,7 +103,6 @@ const Navbar = () => {
               Contact
             </Link>
           </li>
-          {/* New Appointments Link */}
           <li>
             <Link
               to="/appointments"
@@ -146,6 +113,31 @@ const Navbar = () => {
               }}
             >
               Appointments
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/testimonials"
+              className="hover:underline"
+              onClick={() => {
+                closeMenu();
+                scrollToTop();
+              }}
+            >
+              Testimonials
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="/coupons"
+              className="hover:underline"
+              onClick={() => {
+                closeMenu();
+                scrollToTop();
+              }}
+            >
+              Coupons
             </Link>
           </li>
         </ul>
@@ -186,18 +178,6 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/testimonials"
-                className="hover:underline block text-2xl"
-                onClick={() => {
-                  closeMenu();
-                  scrollToTop();
-                }}
-              >
-                Testimonials
-              </Link>
-            </li>
-            <li>
-              <Link
                 to="/services"
                 className="hover:underline block text-2xl"
                 onClick={() => {
@@ -210,14 +190,14 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/coupons"
+                to="/appointments"
                 className="hover:underline block text-2xl"
                 onClick={() => {
                   closeMenu();
                   scrollToTop();
                 }}
               >
-                Coupons
+                Appointments
               </Link>
             </li>
             <li>
@@ -232,17 +212,29 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
-            {/* New Appointments Link */}
             <li>
               <Link
-                to="/appointments"
+                to="/testimonials"
                 className="hover:underline block text-2xl"
                 onClick={() => {
                   closeMenu();
                   scrollToTop();
                 }}
               >
-                Appointments
+                Testimonials
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/coupons"
+                className="hover:underline block text-2xl"
+                onClick={() => {
+                  closeMenu();
+                  scrollToTop();
+                }}
+              >
+                Coupons
               </Link>
             </li>
           </ul>

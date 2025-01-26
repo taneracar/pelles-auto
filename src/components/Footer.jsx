@@ -5,20 +5,20 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white py-12 px-4 md:px-16">
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-12 md:space-y-0">
         {/* Logo and Social Media Section */}
-        <div className="flex justify-center md:justify-start items-center">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-center md:justify-start space-y-4 sm:space-y-0">
           {/* Logo Section */}
           <div className="flex justify-center">
             <Link to="/" onClick={() => window.scrollTo(0, 0)}>
               <img
                 src="/logo.svg"
                 alt="Pelle's Auto Logo"
-                className="w-75 transition-transform transform hover:scale-110 hover:opacity-75"
+                className="w-48 transition-transform transform hover:scale-110 hover:opacity-75"
               />
             </Link>
           </div>
 
           {/* Social Media Links */}
-          <div className="flex space-x-6 ml-8">
+          <div className="flex space-x-6 sm:ml-8 justify-center sm:justify-start">
             <Link
               to="https://www.facebook.com/PellesAuto/"
               target="_blank"
