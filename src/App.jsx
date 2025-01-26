@@ -5,6 +5,7 @@ import Contact from "./pages/Contact";
 import Coupons from "./pages/Coupons"; // Import Coupons page
 import Layout from "./components/Layout";
 import Testimonials from "./pages/Testimonials";
+import Appointment from "./pages/Appointment";
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/coupons" element={<Coupons />} />{" "}
-          {/* Add the Coupons route */}
+          <Route path="/coupons" element={<Coupons />} />
+          <Route path="/appointment" element={<Appointment />} />
         </Routes>
       </Layout>
     </Router>
