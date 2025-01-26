@@ -1,40 +1,4 @@
-const testimonials = [
-  {
-    name: "Jody M.",
-    location: "Downingtown, PA",
-    vehicle: "Toyota Tacoma",
-    rating: 5,
-    review:
-      "The only mechanic I will go to or send anyone!! Not too many mechanics are honest. This is the only place that I will recommend to anyone.",
-    date: "01/24/2025",
-  },
-  {
-    name: "Verified Customer",
-    location: "Malvern, PA",
-    vehicle: "Subaru Legacy",
-    rating: 5,
-    review: "Always accommodating. Waited while oil change done.",
-    date: "01/15/2025",
-  },
-  {
-    name: "Rick S.",
-    location: "Exton, PA",
-    vehicle: "Ford F-150",
-    rating: 5,
-    review:
-      "Charlie Pelle and his crew always do an incredible job with repairs or simple advice. They don’t upsell you in something you don’t need. Great, honest work!",
-    date: "12/22/2024",
-  },
-  {
-    name: "Tony M.",
-    location: "Dodge Pickup",
-    rating: 5,
-    review:
-      "What a great shop! My Dodge Ram passenger axle had gone bad. They fit me into their schedule, allowed me to supply the parts, and repaired it at half the cost of the dealership.",
-    date: "12/18/2024",
-  },
-  // Add more reviews as necessary
-];
+import { testimonials } from "../constants/testimonials";
 
 const Testimonials = () => {
   return (
