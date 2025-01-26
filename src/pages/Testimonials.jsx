@@ -11,7 +11,7 @@ const Testimonials = () => {
 
         {/* Overall Rating Section */}
         <div className="flex justify-center items-center mb-8">
-          <div className="text-5xl font-bold text-yellow-500 mr-4">5.0/5</div>
+          <div className="text-5xl font-bold text-yellow-500 mr-4">5 out of 5</div>
           <div className="text-xl text-gray-700">
             Overall Rating (981 Reviews)
           </div>
