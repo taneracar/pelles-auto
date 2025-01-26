@@ -4,15 +4,51 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-12 px-4 md:px-16">
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-12 md:space-y-0">
-        {/* Logo Section */}
-        <div className="flex justify-center md:justify-start">
-          <Link to="/">
-            <img
-              src="/logo.svg"
-              alt="Pelle's Auto Logo"
-              className="w-60 h-auto"
-            />
-          </Link>
+        {/* Logo and Social Media Section */}
+        <div className="flex justify-center md:justify-start items-center">
+          {/* Logo Section */}
+          <div className="flex justify-center">
+            <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+              <img
+                src="/logo.svg"
+                alt="Pelle's Auto Logo"
+                className="w-75 transition-transform transform hover:scale-110 hover:opacity-75"
+              />
+            </Link>
+          </div>
+
+          {/* Social Media Links */}
+          <div className="flex space-x-6 ml-8">
+            <Link
+              to="https://www.facebook.com/PellesAuto/"
+              target="_blank"
+              className="transition-transform transform hover:scale-110 hover:opacity-75"
+            >
+              <img
+                src="/facebook-logo.png"
+                alt="Facebook"
+                className="w-8 h-8"
+              />
+            </Link>
+            <Link
+              to="https://www.yelp.com/biz/pelles-automotive-company-malvern"
+              target="_blank"
+              className="transition-transform transform hover:scale-110 hover:opacity-75"
+            >
+              <img src="/yelp-logo.png" alt="Yelp" className="w-8 h-8" />
+            </Link>
+            <Link
+              to="https://www.surecritic.com/reviews/pelles-automotive"
+              target="_blank"
+              className="transition-transform transform hover:scale-110 hover:opacity-75"
+            >
+              <img
+                src="/surecritic-logo.png"
+                alt="SureCritic"
+                className="w-8 h-8"
+              />
+            </Link>
+          </div>
         </div>
 
         {/* Contact Info Section */}
