@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import checkIcon from '../assets/check-icon/check-icon.png';
 
 const servicesData = [
   {
@@ -122,7 +123,7 @@ const Services = () => {
                     className="flex items-center space-x-3"
                   >
                     <img
-                      src="/assets/check-icon.png" // Replace with a checkmark icon
+                      src={checkIcon}
                       alt="Check"
                       className="w-5 h-5"
                     />
