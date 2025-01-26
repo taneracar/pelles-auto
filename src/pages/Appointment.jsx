@@ -43,6 +43,17 @@ const Appointment = () => {
         (response) => {
           console.log("Email sent successfully:", response);
           alert("Appointment request sent successfully!");
+          setFormData({
+            date: "",
+            time: "",
+            service: "",
+            firstName: "",
+            lastName: "",
+            vehicle: "",
+            contactMethod: "",
+            phone: "",
+            email: "",
+          });
         },
         (error) => {
           console.error("Error sending email:", error);

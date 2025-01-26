@@ -1,9 +1,11 @@
 import { useState } from "react";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     subject: "",
     message: "",
   });
@@ -18,8 +20,40 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here, such as sending the data to an API
-    alert("Message Sent!");
+
+    // EmailJS sends the email with the form data
+    const emailContent = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      subject: formData.subject,
+      message: formData.message,
+    };
+
+    emailjs
+      .send(
+        "service_n6hzr1o", // EmailJS service ID
+        "template_0xr8hi8", // EmailJS template ID
+        emailContent, // Form data to send in the email
+        "YThWb8XnZh2iYVXjp" // EmailJS user ID
+      )
+      .then(
+        (response) => {
+          console.log("Email sent successfully:", response);
+          alert("Your message has been sent successfully!");
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            subject: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.error("Error sending email:", error);
+          alert("There was an error sending your message.");
+        }
+      );
   };
 
   return (
@@ -83,7 +117,7 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleInputChange}
                 required
-                className="w-full p-3 mt-2 border border-gray-300 rounded-md"
+                className="w-full p-3 mt-2 border border-gray-300 rounded-md text-gray-700"
               />
             </div>
             <div>
@@ -97,7 +131,21 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 required
-                className="w-full p-3 mt-2 border border-gray-300 rounded-md"
+                className="w-full p-3 mt-2 border border-gray-300 rounded-md text-gray-700"
+              />
+            </div>
+            <div>
+              <label className="block text-lg text-gray-700" htmlFor="phone">
+                Phone Number (required)
+              </label>
+              <input
+                type="phone"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleInputChange}
+                required
+                className="w-full p-3 mt-2 border border-gray-300 rounded-md text-gray-700"
               />
             </div>
             <div>
@@ -110,7 +158,7 @@ const Contact = () => {
                 name="subject"
                 value={formData.subject}
                 onChange={handleInputChange}
-                className="w-full p-3 mt-2 border border-gray-300 rounded-md"
+                className="w-full p-3 mt-2 border border-gray-300 rounded-md text-gray-700"
               />
             </div>
             <div>
@@ -123,7 +171,7 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleInputChange}
                 required
-                className="w-full p-3 mt-2 border border-gray-300 rounded-md"
+                className="w-full p-3 mt-2 border border-gray-300 rounded-md text-gray-700"
                 rows="5"
               ></textarea>
             </div>
@@ -136,7 +184,7 @@ const Contact = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition duration-300"
+              className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition duration-300 cursor-pointer"
             >
               Send Message
             </button>
