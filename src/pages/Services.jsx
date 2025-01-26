@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const servicesData = [
   {
@@ -86,6 +87,9 @@ const Services = () => {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <div className="bg-gray-50 py-12 px-4 md:px-16">
       {/* Hero Section */}
@@ -136,13 +140,12 @@ const Services = () => {
         <p className="text-lg text-gray-700 mb-6">
           Need an appointment or more information? We are here to help!
         </p>
-        <a
-          href="http://www.mitchell1crm.com/crmutilities/RequestAppointment.aspx?x=4473&v=ShopWebsite"
-          target="_blank"
-          className="px-6 py-3 bg-blue-600 text-white rounded-full text-lg hover:bg-blue-700 transition duration-300"
-        >
-          Schedule an Appointment
-        </a>
+
+        <Link to="/appointments" onClick={() => scrollToTop()}>
+          <button className="px-6 py-3 bg-blue-600 text-white rounded-full text-lg hover:bg-blue-700 transition duration-300 cursor-pointer">
+            Schedule an Appointment
+          </button>
+        </Link>
       </div>
     </div>
   );

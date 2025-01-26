@@ -134,6 +134,19 @@ const Navbar = () => {
               Contact
             </Link>
           </li>
+          {/* New Appointments Link */}
+          <li>
+            <Link
+              to="/appointments"
+              className="hover:underline"
+              onClick={() => {
+                closeMenu();
+                scrollToTop();
+              }}
+            >
+              Appointments
+            </Link>
+          </li>
         </ul>
       </div>
 
@@ -216,6 +229,19 @@ const Navbar = () => {
                 }}
               >
                 Contact
+              </Link>
+            </li>
+            {/* New Appointments Link */}
+            <li>
+              <Link
+                to="/appointments"
+                className="hover:underline block text-2xl"
+                onClick={() => {
+                  closeMenu();
+                  scrollToTop();
+                }}
+              >
+                Appointments
               </Link>
             </li>
           </ul>

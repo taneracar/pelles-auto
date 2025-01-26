@@ -4,7 +4,7 @@ import { heroImages } from "../assets/Hero/heroImages.js"; // Import images
 import prevIcon from "../assets/Hero/icons/leftArrow.png"; // Import previous button icon
 import nextIcon from "../assets/Hero/icons/rightArrow.png"; // Import next button icon
 import { useSwipeable } from "react-swipeable"; // Import react-swipeable
-
+import { Link } from "react-router-dom";
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -16,6 +16,9 @@ const Hero = () => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + heroImages.length) % heroImages.length
     );
+  };
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
   };
 
   // Swipe functionality
@@ -58,14 +61,11 @@ const Hero = () => {
         <p className="text-lg sm:text-xl md:text-2xl mb-8 text-gray-300">
           Professional car repair services you can trust.
         </p>
-        <button className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold cursor-pointer transition duration-300 ease-in-out transform hover:scale-105">
-          <a
-            href="http://www.mitchell1crm.com/crmutilities/RequestAppointment.aspx?x=4473&v=ShopWebsite"
-            target="_blank"
-          >
+        <Link to="/appointments" onClick={scrollToTop()}>
+          <button className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold cursor-pointer transition duration-300 ease-in-out transform hover:scale-105">
             Book an Appointment
-          </a>
-        </button>
+          </button>
+        </Link>
       </div>
 
       {/* Navigation Buttons (visible only on larger screens) */}
