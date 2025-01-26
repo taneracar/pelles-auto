@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Coupons = () => {
+  const { t } = useTranslation();
   const [isPrintView, setIsPrintView] = useState(false);
 
   // Toggle between standard view and print view
@@ -13,11 +15,9 @@ const Coupons = () => {
       {/* Heading */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-semibold text-gray-900">
-          Special Coupons
+          {t("coupons.title")}
         </h1>
-        <p className="text-lg text-gray-700 mt-4">
-          Save big with our exclusive offers!
-        </p>
+        <p className="text-lg text-gray-700 mt-4">{t("coupons.subTitle")}</p>
       </div>
 
       {/* Coupon Section */}
@@ -25,18 +25,19 @@ const Coupons = () => {
         {/* Coupon Details */}
         <div className="text-center">
           <h2 className="text-3xl font-bold text-blue-600 mb-4">
-            State Inspection & Emissions
+            {t("coupons.couponTitle")}
           </h2>
           <p className="text-xl text-gray-800 mb-4">
-            <span className="line-through text-red-500 mr-2">$79.95</span>
+            <span className="line-through text-red-500 mr-2">
+              {" "}
+              {t("coupons.oldPrice")}
+            </span>
             <span className="text-4xl font-semibold text-green-600">
-              $49.95!
+              {t("coupons.newPrice")}
             </span>
           </p>
           <p className="text-lg text-gray-700 mb-6">
-            Most vehicles. Must present coupon at time of service.
-            <br />
-            Cannot combine offers. Certain restrictions apply.
+            {t("coupons.couponDetails")}
           </p>
 
           {/* Print View Toggle */}
@@ -45,25 +46,25 @@ const Coupons = () => {
               onClick={togglePrintView}
               className="bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition duration-300"
             >
-              Click to Open in Print View
+              {t("coupons.printButton")}
             </button>
           ) : (
             <div className="mt-4">
-              <p className="text-lg text-gray-800">Printing View:</p>
+              <p className="text-lg text-gray-800">{t("coupons.printView")}</p>
               <p className="text-lg text-gray-600">
-                Now you can print this coupon!
+                {t("coupons.printMessage")}
               </p>
               <button
                 onClick={() => window.print()}
                 className="bg-green-600 text-white py-3 px-6 rounded-md hover:bg-green-700 transition duration-300 mt-2"
               >
-                Print Coupon
+                {t("coupons.printCoupon")}
               </button>
               <button
                 onClick={togglePrintView}
                 className="bg-gray-600 text-white py-3 px-6 rounded-md hover:bg-gray-700 transition duration-300 mt-2 ml-2"
               >
-                Close Print View
+                {t("coupons.closePrintView")}
               </button>
             </div>
           )}

@@ -1,7 +1,9 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -40,7 +42,7 @@ const Contact = () => {
       .then(
         (response) => {
           console.log("Email sent successfully:", response);
-          alert("Your message has been sent successfully!");
+          alert(t("contact.successMessage"));
           setFormData({
             name: "",
             email: "",
@@ -51,7 +53,7 @@ const Contact = () => {
         },
         (error) => {
           console.error("Error sending email:", error);
-          alert("There was an error sending your message.");
+          alert(t("contact.errorMessage"));
         }
       );
   };
@@ -60,17 +62,17 @@ const Contact = () => {
     <div className="bg-gray-50 py-12 px-4 md:px-16">
       {/* Contact Information */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-semibold text-gray-900">Contact Us</h1>
-        <p className="text-lg text-gray-700 mt-4">
-          Reach out to us for any inquiries, or stop by for any service!
-        </p>
+        <h1 className="text-4xl font-semibold text-gray-900">
+          {t("contact.title")}
+        </h1>
+        <p className="text-lg text-gray-700 mt-4">{t("contact.subTitle")}</p>
       </div>
 
       {/* Contact Information */}
       <div className="max-w-screen-lg mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         <div>
           <h2 className="text-xl font-semibold text-gray-900 mb-4">
-            Our Address
+            {t("contact.addressTitle")}
           </h2>
           <p className="text-lg text-gray-700 mb-4">
             <strong>36 Bracken Ave</strong>
@@ -81,7 +83,7 @@ const Contact = () => {
             <strong>Phone:</strong> (610) 647-7757
           </p>
           <p className="text-lg text-gray-700 mb-4">
-            <strong>Shop Hours:</strong>
+            <strong>{t("contact.shopHours")}</strong>
             <br />
             Monday – Friday: 8am – 5pm
             <br />
@@ -103,12 +105,12 @@ const Contact = () => {
         {/* Contact Form */}
         <div>
           <h2 className="text-xl font-semibold text-gray-900 mb-4">
-            Send Us a Message
+            {t("contact.formTitle")}
           </h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block text-lg text-gray-700" htmlFor="name">
-                Your Name (required)
+                {t("contact.nameLabel")}
               </label>
               <input
                 type="text"
@@ -122,7 +124,7 @@ const Contact = () => {
             </div>
             <div>
               <label className="block text-lg text-gray-700" htmlFor="email">
-                Your Email (required)
+                {t("contact.emailLabel")}
               </label>
               <input
                 type="email"
@@ -136,7 +138,7 @@ const Contact = () => {
             </div>
             <div>
               <label className="block text-lg text-gray-700" htmlFor="phone">
-                Phone Number (required)
+                {t("contact.phoneLabel")}
               </label>
               <input
                 type="phone"
@@ -150,7 +152,7 @@ const Contact = () => {
             </div>
             <div>
               <label className="block text-lg text-gray-700" htmlFor="subject">
-                Subject
+                {t("contact.subjectLabel")}
               </label>
               <input
                 type="text"
@@ -163,7 +165,7 @@ const Contact = () => {
             </div>
             <div>
               <label className="block text-lg text-gray-700" htmlFor="message">
-                Your Message
+                {t("contact.messageLabel")}
               </label>
               <textarea
                 id="message"
@@ -186,7 +188,7 @@ const Contact = () => {
               type="submit"
               className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition duration-300 cursor-pointer"
             >
-              Send Message
+              {t("contact.submitButton")}
             </button>
           </form>
         </div>

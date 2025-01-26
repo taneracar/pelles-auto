@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import checkIcon from '../assets/check-icon/check-icon.png';
+import checkIcon from "../assets/check-icon/check-icon.png";
 import { servicesData } from "../constants/servicesData";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState(null);
 
   const toggleCategory = (index) => {
@@ -48,11 +50,7 @@ const Services = () => {
                     key={serviceIndex}
                     className="flex items-center space-x-3"
                   >
-                    <img
-                      src={checkIcon}
-                      alt="Check"
-                      className="w-5 h-5"
-                    />
+                    <img src={checkIcon} alt="Check" className="w-5 h-5" />
                     <p className="text-sm text-gray-700">{service}</p>
                   </div>
                 ))}

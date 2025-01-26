@@ -1,22 +1,18 @@
-import { items } from "../constants/aboutUs";
+import { useTranslation } from "react-i18next"; // Import useTranslation
+import { items } from "../constants/aboutUs"; // Static items data
 
 const AboutUs = () => {
+  const { t } = useTranslation(); // Use the translation hook
+
   return (
     <section className="w-full bg-gray-100 py-12 px-4 md:px-16">
       {/* About Us Section */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
-          About Us
+          {t("aboutUs.title")} {/* Translated title */}
         </h2>
         <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-          We are working hard to be your number one choice in automotive repair
-          and maintenance. Our team is dedicated to providing you and your
-          vehicle with professional service and exceptional customer care.
-          <br />
-          <br />
-          Please schedule an appointment with our friendly staff by clicking the
-          Appointment tab above or by calling{" "}
-          <span className="text-blue-500 font-semibold">(610) 647-7757</span>.
+          {t("aboutUs.description")} <strong> {t("aboutUs.numb")}</strong>
         </p>
       </div>
 
@@ -33,9 +29,10 @@ const AboutUs = () => {
               className="w-16 h-16 mb-4 object-contain"
             />
             <h3 className="text-xl font-semibold mb-2 text-gray-800">
-              {item.title}
+              {item.title} {/* Static item title */}
             </h3>
-            <p className="text-gray-600 text-sm">{item.description}</p>
+            <p className="text-gray-600 text-sm">{item.description}</p>{" "}
+            {/* Static item description */}
           </div>
         ))}
       </div>

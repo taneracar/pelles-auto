@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next"; // Import useTranslation
 
 const Footer = () => {
+  const { t } = useTranslation(); // Initialize the translation hook
+
   return (
     <footer className="bg-gray-900 text-white py-12 px-4 md:px-16">
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-12 md:space-y-0">
@@ -54,18 +57,18 @@ const Footer = () => {
         {/* Contact Info Section */}
         <div className="flex flex-col items-center text-center md:text-left md:items-start">
           <h3 className="text-xl font-semibold mb-4 text-gray-300">
-            Contact Us
+            {t("footer.contactUs")} {/* Translated Contact Us title */}
           </h3>
           <div className="space-y-2">
             <p className="text-sm">
-              <strong>Our Address:</strong>
+              <strong>{t("footer.addressTitle")}:</strong>
               <br />
               36 Bracken Ave
               <br />
               Frazer, PA 19355
             </p>
             <p className="text-sm">
-              <strong>Phone:</strong>
+              <strong>{t("footer.phoneTitle")}:</strong>
               <br />
               (610) 647-7757
             </p>
@@ -75,14 +78,14 @@ const Footer = () => {
         {/* Shop Hours Section */}
         <div className="flex flex-col items-center text-center md:text-left md:items-start">
           <h3 className="text-xl font-semibold mb-4 text-gray-300">
-            Shop Hours
+            {t("footer.shopHours")} {/* Translated Shop Hours title */}
           </h3>
           <div className="space-y-2">
             <p className="text-sm">
-              <strong>Monday - Friday:</strong> 8:00am - 5:00pm
+              <strong>{t("footer.mondayFriday")}:</strong> 8:00am - 5:00pm
             </p>
             <p className="text-sm">
-              <strong>Saturday & Sunday:</strong> Closed
+              <strong>{t("footer.weekend")}:</strong> {t("footer.closed")}
             </p>
           </div>
         </div>
@@ -103,8 +106,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="text-center mt-12 text-gray-500 text-sm">
         <p>
-          &copy; {new Date().getFullYear()} Pelle's Automotive All Rights
-          Reserved.
+          &copy; {new Date().getFullYear()} {t("footer.copyright")}
         </p>
       </div>
     </footer>

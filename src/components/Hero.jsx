@@ -5,7 +5,10 @@ import prevIcon from "../assets/Hero/icons/leftArrow.png"; // Import previous bu
 import nextIcon from "../assets/Hero/icons/rightArrow.png"; // Import next button icon
 import { useSwipeable } from "react-swipeable"; // Import react-swipeable
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next"; // Import useTranslation
+
 const Hero = () => {
+  const { t } = useTranslation(); // Use the default namespace
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -17,6 +20,7 @@ const Hero = () => {
       (prevIndex) => (prevIndex - 1 + heroImages.length) % heroImages.length
     );
   };
+
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
@@ -56,14 +60,14 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-30 flex flex-col items-center justify-center h-full px-4 text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white leading-tight">
-          Welcome to Pelle's Automotive
+          {t("hero.title")}
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl mb-8 text-gray-300">
-          Professional car repair services you can trust.
+          {t("hero.description")}
         </p>
         <Link to="/appointments" onClick={scrollToTop()}>
           <button className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold cursor-pointer transition duration-300 ease-in-out transform hover:scale-105">
-            Book an Appointment
+            {t("hero.cta")}
           </button>
         </Link>
       </div>

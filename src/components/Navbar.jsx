@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next"; // Importing useTranslation
 
 const Navbar = () => {
+  const { t } = useTranslation(); // Use the default namespace
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -73,11 +75,12 @@ const Navbar = () => {
         {/* Navigation Links (Desktop) */}
         <ul className="hidden md:flex space-x-6">
           {[
-            { name: "Services", path: "/services" },
-            { name: "Contact", path: "/contact" },
-            { name: "Appointments", path: "/appointments" },
-            { name: "Testimonials", path: "/testimonials" },
-            { name: "Coupons", path: "/coupons" },
+            { name: t('navbar.home'), path: "/" },
+            { name: t('navbar.services'), path: "/services" },
+            { name: t('navbar.appointments'), path: "/appointments" },
+            { name: t('navbar.contact'), path: "/contact" },
+            { name: t('navbar.testimonials'), path: "/testimonials" },
+            { name: t('navbar.coupons'), path: "/coupons" },
           ].map((link) => (
             <li key={link.name}>
               <Link
@@ -119,12 +122,12 @@ const Navbar = () => {
 
           {/* Menu Links */}
           {[
-            { name: "Home", path: "/" },
-            { name: "Services", path: "/services" },
-            { name: "Appointments", path: "/appointments" },
-            { name: "Contact", path: "/contact" },
-            { name: "Testimonials", path: "/testimonials" },
-            { name: "Coupons", path: "/coupons" },
+            { name: t('navbar.home'), path: "/" },
+            { name: t('navbar.services'), path: "/services" },
+            { name: t('navbar.appointments'), path: "/appointments" },
+            { name: t('navbar.contact'), path: "/contact" },
+            { name: t('navbar.testimonials'), path: "/testimonials" },
+            { name: t('navbar.coupons'), path: "/coupons" },
           ].map((link) => (
             <Link
               key={link.name}

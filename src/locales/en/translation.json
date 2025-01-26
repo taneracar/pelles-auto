@@ -1,0 +1,91 @@
+{
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "appointments": "Appointments",
+    "contact": "Contact",
+    "testimonials": "Testimonials",
+    "coupons": "Coupons"
+  },
+  "hero": {
+    "title": "Welcome to Pelle's Automotive",
+    "description": "Professional car repair services you can trust.",
+    "cta": "Book an Appointment"
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "description": "We are working hard to be your number one choice in automotive repair and maintenance. Our team is dedicated to providing you and your vehicle with professional service and exceptional customer care. \n\nPlease schedule an appointment with our friendly staff by clicking the Appointment tab above or by calling ",
+    "numb": "(610) 647-7757",
+    "contactNumber": "(610) 647-7757"
+  },
+  "footer": {
+    "contactUs": "Contact Us",
+    "addressTitle": "Our Address",
+    "phoneTitle": "Phone",
+    "shopHours": "Shop Hours",
+    "mondayFriday": "Monday - Friday",
+    "weekend": "Saturday & Sunday",
+    "closed": "Closed",
+    "copyright": "Pelle's Automotive All Rights Reserved."
+  },
+  "appointment": {
+    "shopHoursTitle": "Shop Hours",
+    "shopHours": "Monday-Friday: 8am-5pm\nSaturday-Sunday: Closed",
+    "scheduleTitle": "Schedule Your Vehicle Drop-Off",
+    "dateLabel": "Date (MM/DD/YYYY):",
+    "timeLabel": "Time:",
+    "selectTime": "Select Time",
+    "serviceLabel": "Service Requested:",
+    "servicePlaceholder": "Enter service (e.g., oil change, inspection)",
+    "contactInfoTitle": "Contact Info",
+    "firstNameLabel": "First Name:",
+    "firstNamePlaceholder": "Enter your first name",
+    "lastNameLabel": "Last Name:",
+    "lastNamePlaceholder": "Enter your last name",
+    "vehicleLabel": "Vehicle:",
+    "vehiclePlaceholder": "Enter vehicle details (e.g., make, model)",
+    "contactMethodLabel": "Preferred Contact Method:",
+    "selectMethod": "Select Method",
+    "contactMethodAny": "Any",
+    "contactMethodPhone": "Phone",
+    "contactMethodEmail": "Email",
+    "phoneLabel": "Phone:",
+    "phonePlaceholder": "Enter your phone number",
+    "emailLabel": "Email:",
+    "emailPlaceholder": "Enter your email address",
+    "submitButton": "Submit",
+    "successMessage": "Appointment request sent successfully!",
+    "errorMessage": "There was an error sending the appointment request."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subTitle": "Reach out to us for any inquiries, or stop by for any service!",
+    "addressTitle": "Our Address",
+    "address": "36 Bracken Ave, Frazer, PA 19355",
+    "phone": "Phone: (610) 647-7757",
+    "shopHours": "Shop Hours:\nMonday – Friday: 8am – 5pm\nSaturday & Sunday: Closed",
+    "googleMap": "View on Google Maps",
+    "formTitle": "Send Us a Message",
+    "nameLabel": "Your Name (required)",
+    "emailLabel": "Your Email (required)",
+    "phoneLabel": "Phone Number (required)",
+    "subjectLabel": "Subject",
+    "messageLabel": "Your Message",
+    "submitButton": "Send Message",
+    "successMessage": "Your message has been sent successfully!",
+    "errorMessage": "There was an error sending your message."
+  },
+  "coupons": {
+    "title": "Special Coupons",
+    "subTitle": "Save big with our exclusive offers!",
+    "couponTitle": "State Inspection & Emissions",
+    "oldPrice": "$79.95",
+    "newPrice": "$49.95!",
+    "couponDetails": "Most vehicles. Must present coupon at time of service. Cannot combine offers. Certain restrictions apply.",
+    "printButton": "Click to Open in Print View",
+    "printView": "Printing View:",
+    "printMessage": "Now you can print this coupon!",
+    "printCoupon": "Print Coupon",
+    "closePrintView": "Close Print View"
+  }
+}

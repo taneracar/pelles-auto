@@ -7,10 +7,15 @@ import Layout from "./components/Layout";
 import Testimonials from "./pages/Testimonials";
 import Appointment from "./pages/Appointment";
 
+// Import the Floating Language Switcher
+import FloatingLanguageSwitcher from "./components/FloatingLanguageSwitcher"; // Adjust path as needed
+
 function App() {
   return (
     <Router>
       <Layout>
+        <FloatingLanguageSwitcher />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/testimonials" element={<Testimonials />} />

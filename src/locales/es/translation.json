@@ -1,0 +1,92 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "appointments": "Citas",
+    "contact": "Contacto",
+    "testimonials": "Testimonios",
+    "coupons": "Cupones"
+  },
+  "hero": {
+    "title": "Bienvenido a Pelle's Automotive",
+    "description": "Servicios profesionales de reparación de automóviles en los que puede confiar.",
+    "cta": "Reservar una cita"
+  },
+
+  "aboutUs": {
+    "title": "Sobre Nosotros",
+    "description": "Estamos trabajando arduamente para ser su primera opción en reparación y mantenimiento de automóviles. Nuestro equipo está dedicado a brindarle a usted y a su vehículo un servicio profesional y una atención al cliente excepcional. \n\nPor favor, programe una cita con nuestro personal amable haciendo clic en la pestaña de Citas arriba o llamando al ",
+    "numb": "(610) 647-7757",
+    "contactNumber": "(610) 647-7757"
+  },
+  "footer": {
+    "contactUs": "Contáctenos",
+    "addressTitle": "Nuestra Dirección",
+    "phoneTitle": "Teléfono",
+    "shopHours": "Horario de la tienda",
+    "mondayFriday": "Lunes - Viernes",
+    "weekend": "Sábado y Domingo",
+    "closed": "Cerrado",
+    "copyright": "Pelle's Automotive Todos los derechos reservados."
+  },
+  "appointment": {
+    "shopHoursTitle": "Horarios de la tienda",
+    "shopHours": "Lunes-Viernes: 8am-5pm\nSábado-Domingo: Cerrado",
+    "scheduleTitle": "Agende su entrega de vehículo",
+    "dateLabel": "Fecha (DD/MM/AAAA):",
+    "timeLabel": "Hora:",
+    "selectTime": "Seleccionar hora",
+    "serviceLabel": "Servicio solicitado:",
+    "servicePlaceholder": "Ingrese el servicio (por ejemplo, cambio de aceite, inspección)",
+    "contactInfoTitle": "Información de contacto",
+    "firstNameLabel": "Primer nombre:",
+    "firstNamePlaceholder": "Ingrese su primer nombre",
+    "lastNameLabel": "Apellido:",
+    "lastNamePlaceholder": "Ingrese su apellido",
+    "vehicleLabel": "Vehículo:",
+    "vehiclePlaceholder": "Ingrese detalles del vehículo (por ejemplo, marca, modelo)",
+    "contactMethodLabel": "Método de contacto preferido:",
+    "selectMethod": "Seleccionar método",
+    "contactMethodAny": "Cualquiera",
+    "contactMethodPhone": "Teléfono",
+    "contactMethodEmail": "Correo electrónico",
+    "phoneLabel": "Teléfono:",
+    "phonePlaceholder": "Ingrese su número de teléfono",
+    "emailLabel": "Correo electrónico:",
+    "emailPlaceholder": "Ingrese su dirección de correo electrónico",
+    "submitButton": "Enviar",
+    "successMessage": "¡Solicitud de cita enviada exitosamente!",
+    "errorMessage": "Hubo un error al enviar la solicitud de cita."
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subTitle": "¡Comuníquese con nosotros para cualquier consulta o visítenos para cualquier servicio!",
+    "addressTitle": "Nuestra dirección",
+    "address": "36 Bracken Ave, Frazer, PA 19355",
+    "phone": "Teléfono: (610) 647-7757",
+    "shopHours": "Horario de la tienda:\nLunes – Viernes: 8am – 5pm\nSábado & Domingo: Cerrado",
+    "googleMap": "Ver en Google Maps",
+    "formTitle": "Envíanos un mensaje",
+    "nameLabel": "Tu nombre (obligatorio)",
+    "emailLabel": "Tu correo electrónico (obligatorio)",
+    "phoneLabel": "Número de teléfono (obligatorio)",
+    "subjectLabel": "Asunto",
+    "messageLabel": "Tu mensaje",
+    "submitButton": "Enviar mensaje",
+    "successMessage": "¡Tu mensaje ha sido enviado con éxito!",
+    "errorMessage": "Hubo un error al enviar tu mensaje."
+  },
+  "coupons": {
+    "title": "Cupones Especiales",
+    "subTitle": "¡Ahorra mucho con nuestras ofertas exclusivas!",
+    "couponTitle": "Inspección Estatal y Emisiones",
+    "oldPrice": "$79.95",
+    "newPrice": "$49.95!",
+    "couponDetails": "Válido para la mayoría de los vehículos. Se debe presentar el cupón al momento del servicio. No se pueden combinar ofertas. Aplican restricciones.",
+    "printButton": "Haz clic para abrir en vista de impresión",
+    "printView": "Vista de impresión:",
+    "printMessage": "¡Ahora puedes imprimir este cupón!",
+    "printCoupon": "Imprimir cupón",
+    "closePrintView": "Cerrar vista de impresión"
+  }
+}
