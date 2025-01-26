@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gray-800 text-white sticky top-0 z-50 shadow-lg">
-      <div className="container mx-auto flex justify-between items-center  px-6">
+      <div className="container mx-auto flex justify-between items-center px-6">
         <Link to="/" onClick={scrollToTop}>
           <img
             src="/logo.svg"
@@ -50,7 +50,7 @@ const Navbar = () => {
 
         {/* Hamburger Menu Icon */}
         <button
-          className="md:hidden flex items-center px-5"
+          className="md:hidden flex items-center px-2"
           onClick={toggleMenu}
           aria-label="Toggle Menu"
         >
