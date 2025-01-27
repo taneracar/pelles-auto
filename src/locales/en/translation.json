@@ -16,7 +16,23 @@
     "title": "About Us",
     "description": "We are working hard to be your number one choice in automotive repair and maintenance. Our team is dedicated to providing you and your vehicle with professional service and exceptional customer care. \n\nPlease schedule an appointment with our friendly staff by clicking the Appointment tab above or by calling ",
     "numb": "(610) 647-7757",
-    "contactNumber": "(610) 647-7757"
+    "contactNumber": "(610) 647-7757",
+    "owner": {
+      "title": "Owner Auto Site",
+      "description": "Complete service and repair history is available for your vehicles. Just one more way we are helping you stay informed! Call us for more details."
+    },
+    "sureCritic": {
+      "title": "Surecritic Reviews",
+      "description": "SureCritic offers trusted, verified reviews to help customers make informed decisions about automotive services and products."
+    },
+    "payment": {
+      "title": "Payment Types Accepted",
+      "description": "We accept all major credit cards, debit cards, and other payment methods."
+    },
+    "ase": {
+      "title": "Affiliates / Certifications",
+      "description": "ASE is an organization that serves technicians and the entire motoring public, so let us work together and deliver on the mission of professional service and quality repair."
+    }
   },
   "footer": {
     "contactUs": "Contact Us",
@@ -63,7 +79,8 @@
     "addressTitle": "Our Address",
     "address": "36 Bracken Ave, Frazer, PA 19355",
     "phone": "Phone: (610) 647-7757",
-    "shopHours": "Shop Hours:\nMonday – Friday: 8am – 5pm\nSaturday & Sunday: Closed",
+    "shopHoursWD": "Shop Hours:\nMonday – Friday: 8am – 5pm",
+    "shopHoursWE": "\nSaturday & Sunday: Closed",
     "googleMap": "View on Google Maps",
     "formTitle": "Send Us a Message",
     "nameLabel": "Your Name (required)",
@@ -87,5 +104,94 @@
     "printMessage": "Now you can print this coupon!",
     "printCoupon": "Print Coupon",
     "closePrintView": "Close Print View"
+  },
+  "services": {
+    "hero_title": "Our Services",
+    "hero_text": "Here at Pelle’s Automotive, we pride ourselves in providing excellent service in the following areas.",
+    "cta_text": "Need an appointment or more information? We are here to help!",
+    "cta_button": "Schedule an Appointment",
+    "standard_maintenance_services": "Standard Maintenance Services",
+    "factory_scheduled_maintenance": "Factory Scheduled Maintenance",
+    "30/60/90/120_mile_services": "30/60/90/120 Mile Services",
+    "computer_diagnostics": "Computer Diagnostics",
+    "oil_changes": "Oil Changes",
+    "tune_ups": "Tune Ups",
+    "filter_replacements": "Filter Replacements",
+    "safety_emissions_inspections": "Safety & Emissions Inspections",
+    "windshield_wiper_blades": "Windshield Wiper Blades",
+    "fluid_services": "Fluid Services",
+    "trip_inspections": "Trip Inspections",
+    "maintenance_inspections": "Maintenance Inspections",
+    "check_engine_light_diagnostics_repair": "Check Engine Light Diagnostics & Repair",
+    "brake_repair_abs_repair": "Brake Repair & ABS Repair",
+    "shocks_struts_repair": "Shocks & Struts Repair",
+    "chassis_suspension_repair": "Chassis & Suspension Repair",
+    "suspension_steering_repair": "Suspension & Steering Repair",
+    "engine_services": "Engine Services",
+    "engine_repair": "Engine Repair",
+    "engine_replacement": "Engine Replacement",
+    "engine_performance_check": "Engine Performance Check",
+    "belt_replacement": "Belt Replacement",
+    "hose_replacement": "Hose Replacement",
+    "cooling_system_repair": "Cooling System Repair",
+    "radiator_repair_replacement": "Radiator Repair & Replacement",
+    "water_pump_repair_replacement": "Water Pump Repair & Replacement",
+    "drivability_diagnostics_repair": "Drivability Diagnostics & Repair",
+    "fuel_injection_repair_service": "Fuel Injection Repair & Service",
+    "fuel_system_repair_maintenance": "Fuel System Repair & Maintenance",
+    "ignition_system_repair_maintenance": "Ignition System Repair & Maintenance",
+    "heating_air_conditioner_repair": "Heating & Air Conditioner Repair",
+    "heating_cooling_system_diagnostics": "Heating & Cooling System Diagnostics",
+    "auto_air_conditioning_repair_service": "Auto Air Conditioning Repair & Service",
+    "heating_system_repair_service": "Heating System Repair & Service",
+    "belt_repair_replacement": "Belt Repair & Replacement",
+    "compressor_repair_replacement": "Compressor Repair & Replacement",
+    "evaporator_repair_replacement": "Evaporator Repair & Replacement",
+    "auto_electrical_services": "Auto Electrical Services",
+    "electrical_system_diagnostics_repair": "Electrical System Diagnostics & Repair",
+    "alternator_repair_replacement": "Alternator Repair & Replacement",
+    "starter_repair_replacement": "Starter Repair & Replacement",
+    "windshield_wiper_repair": "Windshield Wiper Repair",
+    "power_lock_repair": "Power Lock Repair",
+    "power_antenna_repair": "Power Antenna Repair",
+    "power_steering_repair": "Power Steering Repair",
+    "power_window_repair": "Power Window Repair",
+    "power_accessory_repair": "Power Accessory Repair",
+    "light_repair_bulb_replacements": "Light Repair & Bulb Replacements",
+    "exhaust_services": "Exhaust Services",
+    "exhaust_repair_replacement": "Exhaust Repair & Replacement",
+    "muffler_repair_replacement": "Muffler Repair & Replacement",
+    "tailpipe_repair_replacement": "Tailpipe Repair & Replacement"
+  },
+  "testimonials": {
+    "locations": {
+      "downingtown_pa": "Downingtown, PA",
+      "malvern_pa": "Malvern, PA",
+      "exton_pa": "Exton, PA"
+    },
+    "vehicles": {
+      "toyota_tacoma": "Toyota Tacoma",
+      "dodge_pickup": "Dodge Pickup",
+      "ford_f150": "Ford F-150"
+    },
+    "reviews": {
+      "review_1": "The only mechanic I will go to or send anyone!! Not too many mechanics are honest. This is the only place that I will recommend to anyone.",
+      "review_2": "I feel comfortable taking my car to Pelle's for inspection knowing he and his team won't try to perform unnecessary repairs (e.g. cabin filter, air filter, wiper blades, coolant flush) like dealerships and the chain mechanics are trained to do.",
+      "review_3": "Charlie Pelle and his crew always do an incredible job with repairs or simple advice. They don’t upsell you in something you don’t need. Great, honest work!",
+      "review_4": "What a great shop! My Dodge Ram passenger axle had gone bad. They fit me into their schedule, allowed me to supply the parts, and repaired it at half the cost of the dealership.",
+      "review_5": "Outstanding service and repair! Always trust Charlie and mechanics with all my vehicles and service. Very reliable and reasonable prices for great service! Highly recommend them for all your vehicle needs!"
+    }
+  },
+  "testimonialsPage": {
+    "rating": "Rating",
+    "title": "Pelle's Automotive's Reviews",
+    "overallRating": {
+      "rating": "5 out of 5",
+      "description": "Overall Rating (981 Reviews)"
+    },
+    "cta": {
+      "text": "To see more reviews and customer experiences, visit our",
+      "linkText": " SureCritic Pelle's Automotive Testimonial page."
+    }
   }
 }

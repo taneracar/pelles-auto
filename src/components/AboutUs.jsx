@@ -25,13 +25,13 @@ const AboutUs = () => {
           >
             <img
               src={item.image}
-              alt={item.title}
+              alt={t(item.titleKey)}
               className="w-16 h-16 mb-4 object-contain"
             />
             <h3 className="text-xl font-semibold mb-2 text-gray-800">
-              {item.title} {/* Static item title */}
+              {t(item.titleKey)}
             </h3>
-            <p className="text-gray-600 text-sm">{item.description}</p>{" "}
+            <p className="text-gray-600 text-sm">{t(item.descriptionKey)}</p>{" "}
             {/* Static item description */}
           </div>
         ))}

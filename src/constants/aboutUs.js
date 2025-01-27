@@ -3,27 +3,23 @@ const [owner, ase, payment, sureCritic] = aboutUsPicture;
 
 export const items = [
   {
-    title: "Owner Auto Site",
+    titleKey: "aboutUs.owner.title",
     image: owner,
-    description:
-      "Complete service and reapair history is avaible for your vehicles. Just one more way we are helping you stay informed! Call us for more details.",
+    descriptionKey: "aboutUs.owner.description",
   },
   {
-    title: "Surecritic Reviews",
+    titleKey: "aboutUs.sureCritic.title",
     image: sureCritic,
-    description:
-      "SureCritic offers trusted, verified reviews to help customers make informed decisions about automotive services and products.",
+    descriptionKey: "aboutUs.sureCritic.description",
   },
   {
-    title: "Payment Types Accepted",
+    titleKey: "aboutUs.payment.title",
     image: payment,
-    description:
-      "We accept all major credit cards, debit cards, and other payment methods.",
+    descriptionKey: "aboutUs.payment.description",
   },
   {
-    title: "Affiliates / Certifications",
+    titleKey: "aboutUs.ase.title",
     image: ase,
-    description:
-      "ASE is an organization that serves technicians and the entire motoring public, so let us work together and deliver on the mission of professional service and quality repair.",
+    descriptionKey: "aboutUs.ase.description",
   },
 ];

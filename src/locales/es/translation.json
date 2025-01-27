@@ -17,7 +17,23 @@
     "title": "Sobre Nosotros",
     "description": "Estamos trabajando arduamente para ser su primera opción en reparación y mantenimiento de automóviles. Nuestro equipo está dedicado a brindarle a usted y a su vehículo un servicio profesional y una atención al cliente excepcional. \n\nPor favor, programe una cita con nuestro personal amable haciendo clic en la pestaña de Citas arriba o llamando al ",
     "numb": "(610) 647-7757",
-    "contactNumber": "(610) 647-7757"
+    "contactNumber": "(610) 647-7757",
+    "owner": {
+      "title": "Sitio de Propietario de Autos",
+      "description": "El historial completo de servicio y reparación está disponible para sus vehículos. ¡Otra forma en que le ayudamos a mantenerse informado! Llámenos para más detalles."
+    },
+    "sureCritic": {
+      "title": "Reseñas de Surecritic",
+      "description": "SureCritic ofrece reseñas confiables y verificadas para ayudar a los clientes a tomar decisiones informadas sobre servicios y productos automotrices."
+    },
+    "payment": {
+      "title": "Tipos de Pago Aceptados",
+      "description": "Aceptamos todas las principales tarjetas de crédito, tarjetas de débito y otros métodos de pago."
+    },
+    "ase": {
+      "title": "Afiliados / Certificaciones",
+      "description": "ASE es una organización que sirve a técnicos y al público automotor en general, ¡trabajemos juntos para cumplir con la misión de servicio profesional y reparación de calidad!"
+    }
   },
   "footer": {
     "contactUs": "Contáctenos",
@@ -64,7 +80,8 @@
     "addressTitle": "Nuestra dirección",
     "address": "36 Bracken Ave, Frazer, PA 19355",
     "phone": "Teléfono: (610) 647-7757",
-    "shopHours": "Horario de la tienda:\nLunes – Viernes: 8am – 5pm\nSábado & Domingo: Cerrado",
+    "shopHoursWD": "Horario de la tienda:\nLunes – Viernes: 8am – 5pm",
+    "shopHoursWE": "\nSábado & Domingo: Cerrado",
     "googleMap": "Ver en Google Maps",
     "formTitle": "Envíanos un mensaje",
     "nameLabel": "Tu nombre (obligatorio)",
@@ -88,5 +105,94 @@
     "printMessage": "¡Ahora puedes imprimir este cupón!",
     "printCoupon": "Imprimir cupón",
     "closePrintView": "Cerrar vista de impresión"
+  },
+  "services": {
+    "hero_title": "Nuestros Servicios",
+    "hero_text": "Aquí en Pelle's Automotive, nos enorgullecemos de brindar un excelente servicio en las siguientes áreas.",
+    "cta_text": "¿Necesitas una cita o más información? ¡Estamos aquí para ayudarte!",
+    "cta_button": "Programar una Cita",
+    "standard_maintenance_services": "Servicios de Mantenimiento Estándar",
+    "factory_scheduled_maintenance": "Mantenimiento Programado de Fábrica",
+    "30/60/90/120_mile_services": "Servicios de 30/60/90/120 Millas",
+    "computer_diagnostics": "Diagnóstico Informático",
+    "oil_changes": "Cambio de Aceite",
+    "tune_ups": "Puesta a Punto",
+    "filter_replacements": "Reemplazo de Filtros",
+    "safety_emissions_inspections": "Inspecciones de Seguridad y Emisiones",
+    "windshield_wiper_blades": "Brazos de Limpiaparabrisas",
+    "fluid_services": "Servicios de Fluidos",
+    "trip_inspections": "Inspecciones de Viaje",
+    "maintenance_inspections": "Inspecciones de Mantenimiento",
+    "check_engine_light_diagnostics_repair": "Diagnóstico y Reparación de Luz de Motor",
+    "brake_repair_abs_repair": "Reparación de Frenos y ABS",
+    "shocks_struts_repair": "Reparación de Amortiguadores y Struts",
+    "chassis_suspension_repair": "Reparación de Chasis y Suspensión",
+    "suspension_steering_repair": "Reparación de Suspensión y Dirección",
+    "engine_services": "Servicios de Motor",
+    "engine_repair": "Reparación de Motor",
+    "engine_replacement": "Reemplazo de Motor",
+    "engine_performance_check": "Chequeo de Rendimiento del Motor",
+    "belt_replacement": "Reemplazo de Correa",
+    "hose_replacement": "Reemplazo de Manguera",
+    "cooling_system_repair": "Reparación de Sistema de Enfriamiento",
+    "radiator_repair_replacement": "Reparación y Reemplazo de Radiador",
+    "water_pump_repair_replacement": "Reparación y Reemplazo de Bomba de Agua",
+    "drivability_diagnostics_repair": "Diagnóstico y Reparación de Manejo",
+    "fuel_injection_repair_service": "Reparación y Servicio de Inyección de Combustible",
+    "fuel_system_repair_maintenance": "Reparación y Mantenimiento del Sistema de Combustible",
+    "ignition_system_repair_maintenance": "Reparación y Mantenimiento del Sistema de Encendido",
+    "heating_air_conditioner_repair": "Reparación de Calefacción y Aire Acondicionado",
+    "heating_cooling_system_diagnostics": "Diagnóstico de Sistema de Calefacción y Enfriamiento",
+    "auto_air_conditioning_repair_service": "Servicio y Reparación de Aire Acondicionado Automotriz",
+    "heating_system_repair_service": "Servicio y Reparación de Sistema de Calefacción",
+    "belt_repair_replacement": "Reparación y Reemplazo de Correa",
+    "compressor_repair_replacement": "Reparación y Reemplazo de Compresor",
+    "evaporator_repair_replacement": "Reparación y Reemplazo de Evaporador",
+    "auto_electrical_services": "Servicios Eléctricos para Automóviles",
+    "electrical_system_diagnostics_repair": "Diagnóstico y Reparación del Sistema Eléctrico",
+    "alternator_repair_replacement": "Reparación y Reemplazo de Alternador",
+    "starter_repair_replacement": "Reparación y Reemplazo de Arrancador",
+    "windshield_wiper_repair": "Reparación de Limpiaparabrisas",
+    "power_lock_repair": "Reparación de Bloqueo Eléctrico",
+    "power_antenna_repair": "Reparación de Antena Eléctrica",
+    "power_steering_repair": "Reparación de Dirección Asistida",
+    "power_window_repair": "Reparación de Ventanas Eléctricas",
+    "power_accessory_repair": "Reparación de Accesorios Eléctricos",
+    "light_repair_bulb_replacements": "Reparación de Luces y Reemplazo de Bombillas",
+    "exhaust_services": "Servicios de Escape",
+    "exhaust_repair_replacement": "Reparación y Reemplazo de Escape",
+    "muffler_repair_replacement": "Reparación y Reemplazo de Silenciador",
+    "tailpipe_repair_replacement": "Reparación y Reemplazo de Tubo de Escape"
+  },
+  "testimonials": {
+    "locations": {
+      "downingtown_pa": "Downingtown, PA",
+      "malvern_pa": "Malvern, PA",
+      "exton_pa": "Exton, PA"
+    },
+    "vehicles": {
+      "toyota_tacoma": "Toyota Tacoma",
+      "dodge_pickup": "Camioneta Dodge",
+      "ford_f150": "Ford F-150"
+    },
+    "reviews": {
+      "review_1": "¡El único mecánico al que iré o enviaré a alguien! No hay muchos mecánicos honestos. Este es el único lugar que recomendaré a cualquiera.",
+      "review_2": "Me siento cómodo llevando mi automóvil a Pelle's para inspección, sabiendo que él y su equipo no intentarán realizar reparaciones innecesarias (por ejemplo, filtro de cabina, filtro de aire, limpiaparabrisas, purga de refrigerante) como suelen hacer los concesionarios y cadenas de mecánicos.",
+      "review_3": "¡Charlie Pelle y su equipo siempre hacen un trabajo increíble con reparaciones o simples consejos! No te venden algo que no necesitas. ¡Un trabajo honesto y excelente!",
+      "review_4": "¡Qué gran taller! El eje del pasajero de mi Dodge Ram estaba dañado. Me hicieron un espacio en su agenda, me permitieron suministrar las piezas y lo repararon a la mitad del costo del concesionario.",
+      "review_5": "¡Servicio y reparación sobresalientes! Siempre confío en Charlie y sus mecánicos para todos mis vehículos y servicios. ¡Precios muy razonables y un gran servicio! ¡Los recomiendo encarecidamente para todas sus necesidades vehiculares!"
+    }
+  },
+  "testimonialsPage": {
+    "rating": "Calificación",
+    "title": "Reseñas de Pelle's Automotive",
+    "overallRating": {
+      "rating": "5 de 5",
+      "description": "Calificación General (981 Reseñas)"
+    },
+    "cta": {
+      "text": "Para ver más reseñas y experiencias de clientes, visita nuestra",
+      "linkText": " página de testimonios de SureCritic Pelle's Automotive."
+    }
   }
 }

@@ -1,19 +1,23 @@
 import { testimonials } from "../constants/testimonials";
+import { useTranslation } from "react-i18next";
 
 const Testimonials = () => {
+  const { t } = useTranslation();
   return (
     <div className="bg-gray-50 py-12">
       <div className="max-w-screen-xl mx-auto px-6">
         {/* Title */}
         <h1 className="text-4xl font-semibold text-center text-gray-900 mb-12">
-          Pelle's Automotive's Reviews
+          {t("testimonialsPage.title")}
         </h1>
 
         {/* Overall Rating Section */}
         <div className="flex justify-center items-center mb-8">
-          <div className="text-5xl font-bold text-yellow-500 mr-4">5 out of 5</div>
+          <div className="text-5xl font-bold text-yellow-500 mr-4">
+            {t("testimonialsPage.overallRating.rating")}
+          </div>
           <div className="text-xl text-gray-700">
-            Overall Rating (981 Reviews)
+            {t("testimonialsPage.overallRating.description")}
           </div>
         </div>
 
@@ -29,19 +33,27 @@ const Testimonials = () => {
                   {testimonial.name}
                 </div>
                 <div className="ml-4 text-sm text-gray-600">
-                  {testimonial.location}
+                  {testimonial.locationKey && (
+                    <p>
+                      {t(`testimonials.locations.${testimonial.locationKey}`)}
+                    </p>
+                  )}
                 </div>
                 <div className="ml-4 text-sm text-gray-600">
-                  {testimonial.vehicle}
+                  {t(`testimonials.vehicles.${testimonial.vehicleKey}`)}
                 </div>
               </div>
               <div className="flex items-center mb-4">
-                <div className="text-yellow-500 text-lg">{`Rating: ${testimonial.rating}/5`}</div>
+                <div className="text-yellow-500 text-lg">{`${t(
+                  "testimonialsPage.rating"
+                )}: ${testimonial.rating}/5`}</div>
                 <div className="ml-4 text-sm text-gray-600">
                   {testimonial.date}
                 </div>
               </div>
-              <p className="text-md text-gray-700">{testimonial.review}</p>
+              <p className="text-md text-gray-700">
+                {t(`testimonials.reviews.${testimonial.reviewKey}`)}
+              </p>
             </div>
           ))}
         </div>
@@ -49,13 +61,13 @@ const Testimonials = () => {
         {/* CTA for more reviews */}
         <div className="text-center mt-12">
           <p className="text-xl text-gray-700">
-            To see more reviews and customer experiences, visit our{" "}
+            {t("testimonialsPage.cta.text")}
             <a
               href="https://www.surecritic.com/reviews/pelles-automotive?nhd=1"
               target="_blank"
               className="text-blue-500 hover:underline"
             >
-              SureCritic Pelle's Automotive Testimonial page.
+              {t("testimonialsPage.cta.linkText")}
             </a>
           </p>
         </div>
