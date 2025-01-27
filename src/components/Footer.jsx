@@ -70,7 +70,12 @@ const Footer = () => {
             <p className="text-sm">
               <strong>{t("footer.phoneTitle")}:</strong>
               <br />
-              (610) 647-7757
+              <a
+                href="tel:+16106477757"
+                className="text-blue-500 hover:underline"
+              >
+                (610) 647-7757
+              </a>
             </p>
           </div>
         </div>

@@ -12,7 +12,15 @@ const AboutUs = () => {
           {t("aboutUs.title")} {/* Translated title */}
         </h2>
         <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-          {t("aboutUs.description")} <strong> {t("aboutUs.numb")}</strong>
+          {t("aboutUs.description")}{" "}
+          <strong>
+            <a
+              href="tel:+16106477757"
+              className="text-blue-500 hover:underline"
+            >
+              {t("aboutUs.numb")}
+            </a>
+          </strong>
         </p>
       </div>
 

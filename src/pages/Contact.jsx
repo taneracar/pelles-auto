@@ -80,13 +80,18 @@ const Contact = () => {
             Frazer, PA 19355
           </p>
           <p className="text-lg text-gray-700 mb-4">
-            <strong>{t("appointment.phoneLabel")}</strong> (610) 647-7757
+            <strong>{t("appointment.phoneLabel")}</strong>{" "}
+            <a
+              href="tel:+16106477757"
+              className="text-blue-500 hover:underline"
+            >
+              (610) 647-7757
+            </a>
           </p>
           <p className="text-lg text-gray-700 mb-4">
             <strong>{t("contact.shopHoursWD")}</strong>
             <br />
             <strong>{t("contact.shopHoursWE")}</strong>
-           
           </p>
           {/* Google Map */}
           <div className="mt-8">
