@@ -1,29 +1,23 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import HttpApi from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
-import enTranslation from "./locales/en/translation.json"; // Importing JSON using import
+import enTranslation from "./locales/en/translation.json";
 import esTranslation from "./locales/es/translation.json";
 
+const userLanguage = navigator.language.startsWith("es") ? "es" : "en";
+
 i18n
-  .use(HttpApi)
-  .use(LanguageDetector)
-  .use(initReactI18next)
+  .use(LanguageDetector) // Automatically detect the user's language
+  .use(initReactI18next) // Pass i18n instance to react-i18next
   .init({
     resources: {
-      en: {
-        translation: enTranslation,
-      },
-      es: {
-        translation: esTranslation,
-      },
+      en: { translation: enTranslation },
+      es: { translation: esTranslation },
     },
     supportedLngs: ["en", "es"],
-    fallbackLng: "en",
+    lng: userLanguage, // Default language based on user device
+    fallbackLng: "en", // Fallback language
     debug: false,
-    backend: {
-      loadPath: "/src/locales/{{lng}}/translation.json",
-    },
     detection: {
       order: [
         "querystring",
@@ -34,10 +28,10 @@ i18n
         "path",
         "subdomain",
       ],
-      caches: ["cookie"],
+      caches: ["cookie"], // Store the user's language in a cookie
     },
     interpolation: {
-      escapeValue: false,
+      escapeValue: false, // React already escapes by default
     },
   });
 
