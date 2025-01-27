@@ -89,7 +89,12 @@ const Appointment = () => {
         <h1 className="text-2xl font-bold mb-4 text-center">
           {t("appointment.shopHoursTitle")}
         </h1>
-        <p className="text-lg mb-6 text-center">{t("appointment.shopHours")}</p>
+        <p className="text-lg mb-6 text-center">
+          {" "}
+          {t("contact.shopHoursWD")}
+          <br />
+          {t("contact.shopHoursWE")}
+        </p>
 
         {/* Form Section */}
         <h2 className="text-xl font-bold mb-4 text-center">
