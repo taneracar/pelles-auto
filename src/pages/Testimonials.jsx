@@ -12,8 +12,8 @@ const Testimonials = () => {
         </h1>
 
         {/* Overall Rating Section */}
-        <div className="flex justify-center items-center mb-8">
-          <div className="text-5xl font-bold text-yellow-500 mr-4">
+        <div className="flex flex-col md:flex-row justify-center items-center mb-8">
+          <div className="text-5xl font-bold text-yellow-500 mb-2 md:mb-0 md:mr-4">
             {t("testimonialsPage.overallRating.rating")}
           </div>
           <div className="text-xl text-gray-700">
