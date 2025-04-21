@@ -21,7 +21,6 @@ const Services = () => {
   };
   return (
     <div className="bg-gray-50 py-12 px-4 md:px-16">
-      {/* Hero Section */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-semibold text-gray-900">
           {t("services.hero_title")}
@@ -29,7 +28,6 @@ const Services = () => {
         <p className="text-lg text-gray-700 mt-4">{t("services.hero_text")}</p>
       </div>
 
-      {/* Services List */}
       <div className="max-w-screen-xl mx-auto">
         {servicesData.map((category, index) => (
           <div key={index} className="mb-12">
@@ -62,7 +60,6 @@ const Services = () => {
         ))}
       </div>
 
-      {/* Call to Action */}
       <div className="text-center mt-12">
         <p className="text-lg text-gray-700 mb-6">{t("services.cta_text")}</p>
 

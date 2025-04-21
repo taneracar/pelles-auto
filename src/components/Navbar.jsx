@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useTranslation } from "react-i18next"; // Importing useTranslation
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
-  const { t } = useTranslation(); // Use the default namespace
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -50,7 +50,6 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Hamburger Menu Icon */}
         <button
           className="md:hidden flex items-center px-2"
           onClick={toggleMenu}
@@ -72,15 +71,14 @@ const Navbar = () => {
           </svg>
         </button>
 
-        {/* Navigation Links (Desktop) */}
         <ul className="hidden md:flex space-x-6">
           {[
-            { name: t('navbar.home'), path: "/" },
-            { name: t('navbar.services'), path: "/services" },
-            { name: t('navbar.appointments'), path: "/appointments" },
-            { name: t('navbar.contact'), path: "/contact" },
-            { name: t('navbar.testimonials'), path: "/testimonials" },
-            { name: t('navbar.coupons'), path: "/coupons" },
+            { name: t("navbar.home"), path: "/" },
+            { name: t("navbar.services"), path: "/services" },
+            { name: t("navbar.appointments"), path: "/appointments" },
+            { name: t("navbar.contact"), path: "/contact" },
+            { name: t("navbar.testimonials"), path: "/testimonials" },
+            { name: t("navbar.coupons"), path: "/coupons" },
           ].map((link) => (
             <li key={link.name}>
               <Link
@@ -102,7 +100,6 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Mobile Menu with Full-Screen Backdrop */}
       <div
         className={`${
           isMenuOpen ? "block" : "hidden"
@@ -112,7 +109,6 @@ const Navbar = () => {
           className="mobile-menu w-full h-full flex flex-col justify-center items-center relative space-y-6"
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Close Button */}
           <button
             className="absolute top-4 right-6 text-white text-3xl transition-transform transform hover:scale-110"
             onClick={closeMenu}
@@ -120,14 +116,13 @@ const Navbar = () => {
             &times;
           </button>
 
-          {/* Menu Links */}
           {[
-            { name: t('navbar.home'), path: "/" },
-            { name: t('navbar.services'), path: "/services" },
-            { name: t('navbar.appointments'), path: "/appointments" },
-            { name: t('navbar.contact'), path: "/contact" },
-            { name: t('navbar.testimonials'), path: "/testimonials" },
-            { name: t('navbar.coupons'), path: "/coupons" },
+            { name: t("navbar.home"), path: "/" },
+            { name: t("navbar.services"), path: "/services" },
+            { name: t("navbar.appointments"), path: "/appointments" },
+            { name: t("navbar.contact"), path: "/contact" },
+            { name: t("navbar.testimonials"), path: "/testimonials" },
+            { name: t("navbar.coupons"), path: "/coupons" },
           ].map((link) => (
             <Link
               key={link.name}

@@ -1,10 +1,10 @@
 export const testimonials = [
   {
     name: "Jody M.",
-    locationKey: "downingtown_pa", // Key for translation
-    vehicleKey: "toyota_tacoma", // Key for translation
+    locationKey: "downingtown_pa",
+    vehicleKey: "toyota_tacoma",
     rating: 5,
-    reviewKey: "review_1", // Key for translation
+    reviewKey: "review_1",
     date: "01/24/2025",
   },
   {

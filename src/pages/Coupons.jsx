@@ -5,14 +5,12 @@ const Coupons = () => {
   const { t } = useTranslation();
   const [isPrintView, setIsPrintView] = useState(false);
 
-  // Toggle between standard view and print view
   const togglePrintView = () => {
     setIsPrintView(!isPrintView);
   };
 
   return (
     <div className="bg-gray-50 py-12 px-4 md:px-16">
-      {/* Heading */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-semibold text-gray-900">
           {t("coupons.title")}
@@ -20,9 +18,7 @@ const Coupons = () => {
         <p className="text-lg text-gray-700 mt-4">{t("coupons.subTitle")}</p>
       </div>
 
-      {/* Coupon Section */}
       <div className="max-w-screen-md mx-auto bg-white p-8 rounded-lg shadow-lg">
-        {/* Coupon Details */}
         <div className="text-center">
           <h2 className="text-3xl font-bold text-blue-600 mb-4">
             {t("coupons.couponTitle")}
@@ -40,7 +36,6 @@ const Coupons = () => {
             {t("coupons.couponDetails")}
           </p>
 
-          {/* Print View Toggle */}
           {!isPrintView ? (
             <button
               onClick={togglePrintView}

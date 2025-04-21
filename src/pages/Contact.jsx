@@ -23,7 +23,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // EmailJS sends the email with the form data
+    
     const emailContent = {
       name: formData.name,
       email: formData.email,
@@ -34,14 +34,13 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_n6hzr1o", // EmailJS service ID
-        "template_0xr8hi8", // EmailJS template ID
-        emailContent, // Form data to send in the email
-        "YThWb8XnZh2iYVXjp" // EmailJS user ID
+        "service_n6hzr1o", 
+        "template_0xr8hi8", 
+        emailContent, 
+        "YThWb8XnZh2iYVXjp" 
       )
       .then(
-        (response) => {
-          console.log("Email sent successfully:", response);
+        () => {
           alert(t("contact.successMessage"));
           setFormData({
             name: "",
@@ -60,7 +59,7 @@ const Contact = () => {
 
   return (
     <div className="bg-gray-50 py-12 px-4 md:px-16">
-      {/* Contact Information */}
+     
       <div className="text-center mb-12">
         <h1 className="text-4xl font-semibold text-gray-900">
           {t("contact.title")}
@@ -68,7 +67,7 @@ const Contact = () => {
         <p className="text-lg text-gray-700 mt-4">{t("contact.subTitle")}</p>
       </div>
 
-      {/* Contact Information */}
+     
       <div className="max-w-screen-lg mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         <div>
           <h2 className="text-xl font-semibold text-gray-900 mb-4">
@@ -93,7 +92,7 @@ const Contact = () => {
             <br />
             <strong>{t("contact.shopHoursWE")}</strong>
           </p>
-          {/* Google Map */}
+         
           <div className="mt-8">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.2397771128895!2d-75.54605268469945!3d39.98840859719525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c65c45df0d7b3d%3A0x9a8be87e43692c94!2s36%20Bracken%20Ave%2C%20Frazer%2C%20PA%2019355!5e0!3m2!1sen!2sus!4v1625569073619!5m2!1sen!2sus"
@@ -106,7 +105,7 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Contact Form */}
+      
         <div>
           <h2 className="text-xl font-semibold text-gray-900 mb-4">
             {t("contact.formTitle")}
@@ -181,13 +180,13 @@ const Contact = () => {
                 rows="5"
               ></textarea>
             </div>
-            {/* reCAPTCHA */}
+           
             <div
               className="g-recaptcha"
               data-sitekey="your-site-key-here"
             ></div>
 
-            {/* Submit Button */}
+           
             <button
               type="submit"
               className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition duration-300 cursor-pointer"

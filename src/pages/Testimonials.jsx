@@ -6,12 +6,10 @@ const Testimonials = () => {
   return (
     <div className="bg-gray-50 py-12">
       <div className="max-w-screen-xl mx-auto px-6">
-        {/* Title */}
         <h1 className="text-4xl font-semibold text-center text-gray-900 mb-12">
           {t("testimonialsPage.title")}
         </h1>
 
-        {/* Overall Rating Section */}
         <div className="flex flex-col md:flex-row justify-center items-center mb-8">
           <div className="text-5xl font-bold text-yellow-500 mb-2 md:mb-0 md:mr-4">
             {t("testimonialsPage.overallRating.rating")}
@@ -21,7 +19,6 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Reviews List */}
         <div>
           {testimonials.map((testimonial, index) => (
             <div
@@ -58,7 +55,6 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* CTA for more reviews */}
         <div className="text-center mt-12">
           <p className="text-xl text-gray-700">
             {t("testimonialsPage.cta.text")}

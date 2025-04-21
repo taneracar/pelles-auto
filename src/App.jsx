@@ -2,13 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-import Coupons from "./pages/Coupons"; // Import Coupons page
+import Coupons from "./pages/Coupons";
 import Layout from "./components/Layout";
 import Testimonials from "./pages/Testimonials";
 import Appointment from "./pages/Appointment";
 
-// Import the Floating Language Switcher
-import FloatingLanguageSwitcher from "./components/FloatingLanguageSwitcher"; // Adjust path as needed
+import FloatingLanguageSwitcher from "./components/FloatingLanguageSwitcher";
 
 function App() {
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import emailjs from "emailjs-com";
 import { useTranslation } from "react-i18next";
 
@@ -18,9 +18,8 @@ const Appointment = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Your EmailJS user ID and template ID
-    const userID = "YThWb8XnZh2iYVXjp"; // Get it from your EmailJS account
-    const templateID = "template_8z4igzq"; // Get it from your EmailJS account
+    const userID = "YThWb8XnZh2iYVXjp";
+    const templateID = "template_8z4igzq";
 
     const emailContent = {
       date: formData.date,
@@ -34,34 +33,26 @@ const Appointment = () => {
       email: formData.email,
     };
 
-    emailjs
-      .send(
-        "service_n6hzr1o", // Service ID from EmailJS
-        templateID, // Template ID from EmailJS
-        emailContent, // Form data
-        userID // User ID from EmailJS
-      )
-      .then(
-        (response) => {
-          console.log("Email sent successfully:", response);
-          alert(t("appointment.successMessage"));
-          setFormData({
-            date: "",
-            time: "",
-            service: "",
-            firstName: "",
-            lastName: "",
-            vehicle: "",
-            contactMethod: "",
-            phone: "",
-            email: "",
-          });
-        },
-        (error) => {
-          console.error("Error sending email:", error);
-          alert(t("appointment.errorMessage"));
-        }
-      );
+    emailjs.send("service_n6hzr1o", templateID, emailContent, userID).then(
+      () => {
+        alert(t("appointment.successMessage"));
+        setFormData({
+          date: "",
+          time: "",
+          service: "",
+          firstName: "",
+          lastName: "",
+          vehicle: "",
+          contactMethod: "",
+          phone: "",
+          email: "",
+        });
+      },
+      (error) => {
+        console.error("Error sending email:", error);
+        alert(t("appointment.errorMessage"));
+      }
+    );
   };
 
   const handleChange = (e) => {
@@ -85,7 +76,6 @@ const Appointment = () => {
   return (
     <div className="bg-white text-gray-900 min-h-screen flex items-center justify-center">
       <div className="bg-gray-200 text-gray-900 p-8 rounded-lg shadow-lg max-w-3xl w-full lg:max-w-5xl m-2">
-        {/* Shop Hours Section */}
         <h1 className="text-2xl font-bold mb-4 text-center">
           {t("appointment.shopHoursTitle")}
         </h1>
@@ -96,13 +86,11 @@ const Appointment = () => {
           {t("contact.shopHoursWE")}
         </p>
 
-        {/* Form Section */}
         <h2 className="text-xl font-bold mb-4 text-center">
           {t("appointment.scheduleTitle")}
         </h2>
 
         <form className="space-y-6" onSubmit={handleSubmit}>
-          {/* Date Input */}
           <div className="flex flex-col">
             <label htmlFor="date" className="font-medium">
               {t("appointment.dateLabel")}
@@ -118,7 +106,6 @@ const Appointment = () => {
             />
           </div>
 
-          {/* Time Input */}
           <div className="flex flex-col">
             <label htmlFor="time" className="font-medium">
               {t("appointment.timeLabel")}
@@ -140,7 +127,6 @@ const Appointment = () => {
             </select>
           </div>
 
-          {/* Service Requested */}
           <div className="flex flex-col">
             <label htmlFor="service" className="font-medium">
               {t("appointment.serviceLabel")}
@@ -157,12 +143,10 @@ const Appointment = () => {
             />
           </div>
 
-          {/* Contact Info */}
           <h3 className="text-xl font-bold text-center">
             {t("appointment.contactInfoTitle")}
           </h3>
 
-          {/* First Name */}
           <div className="flex flex-col">
             <label htmlFor="firstName" className="font-medium">
               {t("appointment.firstNameLabel")}
@@ -179,7 +163,6 @@ const Appointment = () => {
             />
           </div>
 
-          {/* Last Name */}
           <div className="flex flex-col">
             <label htmlFor="lastName" className="font-medium">
               {t("appointment.lastNameLabel")}
@@ -196,7 +179,6 @@ const Appointment = () => {
             />
           </div>
 
-          {/* Vehicle */}
           <div className="flex flex-col">
             <label htmlFor="vehicle" className="font-medium">
               {t("appointment.vehicleLabel")}
@@ -213,7 +195,6 @@ const Appointment = () => {
             />
           </div>
 
-          {/* Preferred Contact Method */}
           <div className="flex flex-col">
             <label htmlFor="contactMethod" className="font-medium">
               {t("appointment.contactMethodLabel")}
@@ -237,7 +218,6 @@ const Appointment = () => {
             </select>
           </div>
 
-          {/* Phone */}
           <div className="flex flex-col">
             <label htmlFor="phone" className="font-medium">
               {t("appointment.phoneLabel")}
@@ -254,7 +234,6 @@ const Appointment = () => {
             />
           </div>
 
-          {/* Email */}
           <div className="flex flex-col">
             <label htmlFor="email" className="font-medium">
               {t("appointment.emailLabel")}
@@ -271,7 +250,6 @@ const Appointment = () => {
             />
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
             className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer"
