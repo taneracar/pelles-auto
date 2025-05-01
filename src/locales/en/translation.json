@@ -1,4 +1,42 @@
 {
+  "helmet": {
+    "home": {
+      "title": "Home | Pelles Auto",
+      "description": "Pelles Auto offers reliable car maintenance and repair services to keep your vehicle in top condition. Book your appointment today.",
+      "ogTitle": "Home | Pelles Auto",
+      "ogDescription": "Reliable car maintenance and repair service you can trust."
+    },
+    "appointments": {
+      "title": "Appointments | Pelles Auto",
+      "description": "Book your appointment with Pelles Auto for trusted car maintenance and repair services.",
+      "ogTitle": "Appointments | Pelles Auto",
+      "ogDescription": "Schedule your appointment with our expert team for car repair and maintenance."
+    },
+    "contact": {
+      "title": "Contact | Pelles Auto",
+      "description": "Get in touch with Pelles Auto for car maintenance and repair services. Our expert team is ready to assist you.",
+      "ogTitle": "Contact | Pelles Auto",
+      "ogDescription": "Contact Pelles Auto for trusted car maintenance and repair services."
+    },
+    "coupons": {
+      "title": "Coupons | Pelles Auto",
+      "description": "Discover exclusive coupons for Pelles Auto's car maintenance and repair services. Save on your next visit!",
+      "ogTitle": "Coupons | Pelles Auto",
+      "ogDescription": "Find exclusive coupons and offers for your next car service at Pelles Auto."
+    },
+    "services": {
+      "title": "Services | Pelles Auto",
+      "description": "Explore our range of reliable car maintenance and repair services tailored to keep your vehicle in excellent condition.",
+      "ogTitle": "Services | Pelles Auto",
+      "ogDescription": "Discover trustworthy automotive services designed to meet your needs."
+    },
+    "testimonials": {
+      "title": "Testimonials | Pelles Auto",
+      "description": "Hear what our satisfied customers have to say about Pelles Auto's trusted car services.",
+      "ogTitle": "Testimonials | Pelles Auto",
+      "ogDescription": "See how we've helped customers with top-quality car care."
+    }
+  },
   "navbar": {
     "home": "Home",
     "services": "Services",

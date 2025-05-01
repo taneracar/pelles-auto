@@ -1,4 +1,42 @@
 {
+  "helmet": {
+    "home": {
+      "title": "Inicio | Pelles Auto",
+      "description": "Pelles Auto ofrece servicios confiables de mantenimiento y reparación de automóviles. Reserva tu cita hoy mismo.",
+      "ogTitle": "Inicio | Pelles Auto",
+      "ogDescription": "Servicio confiable de mantenimiento y reparación de automóviles."
+    },
+    "appointments": {
+      "title": "Citas | Pelles Auto",
+      "description": "Agende su cita con Pelles Auto para servicios confiables de mantenimiento y reparación de automóviles.",
+      "ogTitle": "Citas | Pelles Auto",
+      "ogDescription": "Programe su cita con nuestro equipo de expertos para reparación y mantenimiento de automóviles."
+    },
+    "contact": {
+      "title": "Contacto | Pelles Auto",
+      "description": "Póngase en contacto con Pelles Auto para servicios de mantenimiento y reparación de automóviles. Nuestro equipo de expertos está listo para asistirle.",
+      "ogTitle": "Contacto | Pelles Auto",
+      "ogDescription": "Contacte con Pelles Auto para servicios confiables de mantenimiento y reparación de autos."
+    },
+    "coupons": {
+      "title": "Cupones | Pelles Auto",
+      "description": "Descubra cupones exclusivos para los servicios de mantenimiento y reparación de autos en Pelles Auto. ¡Ahorre en su próxima visita!",
+      "ogTitle": "Cupones | Pelles Auto",
+      "ogDescription": "Encuentre cupones exclusivos y ofertas para su próximo servicio de auto en Pelles Auto."
+    },
+    "services": {
+      "title": "Servicios | Pelles Auto",
+      "description": "Descubre nuestra gama de servicios confiables de mantenimiento y reparación de automóviles.",
+      "ogTitle": "Servicios | Pelles Auto",
+      "ogDescription": "Servicios automotrices confiables adaptados a tus necesidades."
+    },
+    "testimonials": {
+      "title": "Testimonios | Pelles Auto",
+      "description": "Conozca lo que nuestros clientes satisfechos dicen sobre los servicios de confianza de Pelles Auto.",
+      "ogTitle": "Testimonios | Pelles Auto",
+      "ogDescription": "Mira cómo hemos ayudado a nuestros clientes con servicios de alta calidad."
+    }
+  },
   "navbar": {
     "home": "Inicio",
     "services": "Servicios",
