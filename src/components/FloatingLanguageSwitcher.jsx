@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import Flag from "react-world-flags";
 
 export default function FloatingLanguageSwitcher() {
   const { i18n } = useTranslation();
@@ -24,19 +23,25 @@ export default function FloatingLanguageSwitcher() {
       </button>
 
       {isOpen && (
-        <div className="absolute bottom-16 left-0 bg-white border shadow-md rounded-md w-32 p-2 sm:w-28">
+        <div className="absolute bottom-16 left-0 bg-white border shadow-md rounded-md w-32 p-2 sm:w-28 ">
           <button
             onClick={() => changeLanguage("en")}
-            className="flex items-center w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-200 hover:cursor-pointer rounded-md space-x-2"
+            className="flex items-center w-full py-2 text-left text-gray-700 hover:bg-gray-200 hover:cursor-pointer rounded-md space-x-2"
           >
-            <Flag code="US" className="w-5 h-5" />
+            {/* <Flag code="US" className="w-5 h-5" /> */}
+            <span role="img" aria-label="US Flag" className="w-5 h-5">
+              🇺🇸
+            </span>
             <span>English</span>
           </button>
           <button
             onClick={() => changeLanguage("es")}
-            className="flex items-center w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-200 hover:cursor-pointer rounded-md space-x-2"
+            className="flex items-center w-full py-2 text-left text-gray-700 hover:bg-gray-200 hover:cursor-pointer rounded-md space-x-2"
           >
-            <Flag code="ES" className="w-5 h-5" />
+            {/* <Flag code="ES" className="w-5 h-5" /> */}
+            <span role="img" aria-label="Spain Flag" className="w-5 h-5">
+              🇪🇸
+            </span>
             <span>Español</span>
           </button>
         </div>
