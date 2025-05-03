@@ -114,6 +114,7 @@ const Contact = () => {
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
+                title="Google Maps Pelle's Automotive"
               ></iframe>
             </div>
           </div>
