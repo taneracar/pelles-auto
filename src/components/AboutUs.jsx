@@ -15,7 +15,7 @@ const AboutUs = () => {
           <strong>
             <a
               href="tel:+16106477757"
-              className="text-blue-500 hover:underline"
+              className="text-blue-700 hover:underline"
             >
               {t("aboutUs.numb")}
             </a>
