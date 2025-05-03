@@ -117,7 +117,7 @@
     "addressTitle": "Our Address",
     "address": "36 Bracken Ave, Frazer, PA 19355",
     "phone": "Phone: (610) 647-7757",
-    "shopHoursWD": "Shop Hours:\nMonday – Friday: 8am – 5pm",
+    "shopHoursWD": "\nMonday – Friday: 8am – 5pm",
     "shopHoursWE": "\nSaturday & Sunday: Closed",
     "googleMap": "View on Google Maps",
     "formTitle": "Send Us a Message",
@@ -224,7 +224,7 @@
     "rating": "Rating",
     "title": "Pelle's Automotive's Reviews",
     "overallRating": {
-      "rating": "5 out of 5",
+      "rating": "5/5",
       "description": "Overall Rating (981 Reviews)"
     },
     "cta": {
