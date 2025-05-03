@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gray-800 text-white sticky top-0 z-50 shadow-lg">
-      <div className="container mx-auto flex justify-between items-center px-6">
+      <div className="mx-auto flex justify-between items-center px-6 max-sm:pl-0 max-sm:pr-4 ">
         <Link to="/" onClick={scrollToTop}>
           <img
             src="/logo.svg"
@@ -71,7 +71,7 @@ const Navbar = () => {
           </svg>
         </button>
 
-        <ul className="hidden md:flex space-x-6">
+        <ul className="hidden md:flex max-md:space-x-4 lg:space-x-8 lg:mr-10">
           {[
             { name: t("navbar.home"), path: "/" },
             { name: t("navbar.services"), path: "/services" },
@@ -83,7 +83,7 @@ const Navbar = () => {
             <li key={link.name}>
               <Link
                 to={link.path}
-                className={`relative px-3 py-2 font-medium ${
+                className={`relative px-3 py-2 flex items-center justify-center font-medium ${
                   isActive(link.path)
                     ? "text-teal-400 underline"
                     : "text-white hover:text-teal-300"
