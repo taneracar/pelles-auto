@@ -6,19 +6,19 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-white py-12 px-4 md:px-16">
-      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-12 md:space-y-0">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-center md:justify-start space-y-4 sm:space-y-0">
-          <div className="flex justify-center">
+      <div className="w-full mx-auto flex flex-col lg:flex-row justify-between items-center space-y-12 md:space-y-0 ">
+        <div className=" flex flex-col lg:flex-row sm:items-center justify-center md:justify-start space-y-4 sm:space-y-0 md:space-y-4 ">
+          <div className="flex justify-center mr-6">
             <Link to="/" onClick={() => window.scrollTo(0, 0)}>
               <img
                 src="/logo.svg"
                 alt="Pelle's Auto Logo"
-                className="w-48 transition-transform transform hover:scale-110 hover:opacity-75"
+                className="w-full h-auto transition-transform transform hover:scale-110 hover:opacity-75"
               />
             </Link>
           </div>
 
-          <div className="flex space-x-6 sm:ml-8 justify-center sm:justify-start">
+          <div className="flex space-x-6 sm:ml-8 justify-center sm:justify-start md:mb-4  md:-ml-4">
             <Link
               to="https://www.facebook.com/PellesAuto/"
               target="_blank"
