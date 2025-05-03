@@ -89,6 +89,7 @@ const Hero = () => {
             className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full cursor-pointer ${
               currentIndex === index ? "bg-blue-500" : "bg-gray-400"
             }`}
+            aria-label="Slide indicator"
           />
         ))}
       </div>
