@@ -72,13 +72,21 @@ const Hero = () => {
         onClick={handlePrev}
         className="absolute left-5 sm:left-8 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-3 sm:p-4 rounded-full z-30 hidden sm:block"
       >
-        <img src={prevIcon} alt="Previous" className="w-6 h-6 sm:w-8 sm:h-8" />
+        <img
+          src={prevIcon}
+          alt="Previous"
+          className="w-auto h-auto max-w-[32px] max-h-[32px]"
+        />
       </button>
       <button
         onClick={handleNext}
         className="absolute right-5 sm:right-8 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-3 sm:p-4 rounded-full z-30 hidden sm:block"
       >
-        <img src={nextIcon} alt="Next" className="w-6 h-6 sm:w-8 sm:h-8" />
+        <img
+          src={nextIcon}
+          alt="Next"
+          className="w-auto h-auto max-w-[32px] max-h-[32px]"
+        />
       </button>
 
       <div className="absolute bottom-8 sm:bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-4 z-30">
