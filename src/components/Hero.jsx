@@ -35,7 +35,7 @@ const Hero = () => {
   return (
     <section
       {...swipeHandlers}
-      className="relative w-full h-screen bg-gray-900 text-white overflow-hidden"
+      className="relative w-full h-[90vh] bg-gray-900 text-white overflow-hidden"
     >
       <div className="absolute inset-0 z-10">
         <AnimatePresence>
