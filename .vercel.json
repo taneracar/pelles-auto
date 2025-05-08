@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/coupons",
+      "destination": "/coupons",
+      "permanent": true
+    }
+  ]
+}
