@@ -41,8 +41,8 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gray-800 text-white sticky top-0 z-50 shadow-lg">
-      <div className="mx-auto flex justify-between items-center px-6 max-sm:pl-0 max-sm:pr-4 ">
-        <Link to="/" onClick={scrollToTop}>
+      <div className="mx-auto flex justify-between items-center px-6 max-sm:pl-0 max-sm:pr-4">
+        <Link to="/" onClick={scrollToTop} className=" max-md:-ml-5">
           <img
             src="/logo.svg"
             alt="Pelle's Auto Logo"
