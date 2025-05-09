@@ -4,6 +4,10 @@
       "source": "/coupons",
       "destination": "/coupons",
       "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "https://www.pellesautomotive.net/services"
     }
   ]
 }
