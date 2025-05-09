@@ -1,13 +1,3 @@
 {
-  "redirects": [
-    {
-      "source": "/coupons",
-      "destination": "/coupons",
-      "permanent": true
-    },
-    {
-      "source": "/services",
-      "destination": "https://www.pellesautomotive.net/services"
-    }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
