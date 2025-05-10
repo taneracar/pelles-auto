@@ -24,6 +24,10 @@ const Services = () => {
     <>
       <Helmet>
         <title>{t("helmet.services.title")}</title>
+        <link
+          rel="canonical"
+          href="https://www.pellesautomotive.net/services"
+        />
         <meta name="description" content={t("helmet.services.description")} />
         <meta property="og:title" content={t("helmet.services.ogTitle")} />
         <meta

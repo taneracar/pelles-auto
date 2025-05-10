@@ -10,6 +10,7 @@ const Home = () => {
     <>
       <Helmet>
         <title>{t("helmet.home.title")}</title>
+        <link rel="canonical" href="https://www.pellesautomotive.net/" />
         <meta name="description" content={t("helmet.home.description")} />
         <meta property="og:title" content={t("helmet.home.ogTitle")} />
         <meta

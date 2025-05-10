@@ -14,6 +14,7 @@ const Coupons = () => {
     <>
       <Helmet>
         <title>{t("helmet.coupons.title")}</title>
+        <link rel="canonical" href="https://www.pellesautomotive.net/coupons" />
         <meta name="description" content={t("helmet.coupons.description")} />
         <meta property="og:title" content={t("helmet.coupons.ogTitle")} />
         <meta

@@ -78,6 +78,10 @@ const Appointment = () => {
     <>
       <Helmet>
         <title>{t("helmet.appointments.title")}</title>
+        <link
+          rel="canonical"
+          href="https://www.pellesautomotive.net/appointments"
+        />
         <meta
           name="description"
           content={t("helmet.appointments.description")}

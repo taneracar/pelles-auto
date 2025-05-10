@@ -61,6 +61,7 @@ const Contact = () => {
     <>
       <Helmet>
         <title>{t("helmet.contact.title")}</title>
+        <link rel="canonical" href="https://www.pellesautomotive.net/contact" />
         <meta name="description" content={t("helmet.contact.description")} />
         <meta property="og:title" content={t("helmet.contact.ogTitle")} />
         <meta

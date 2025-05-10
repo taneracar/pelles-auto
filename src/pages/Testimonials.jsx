@@ -8,6 +8,10 @@ const Testimonials = () => {
     <>
       <Helmet>
         <title>{t("helmet.testimonials.title")}</title>
+        <link
+          rel="canonical"
+          href="https://www.pellesautomotive.net/testimonials"
+        />
         <meta
           name="description"
           content={t("helmet.testimonials.description")}
