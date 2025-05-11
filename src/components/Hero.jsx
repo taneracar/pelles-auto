@@ -57,9 +57,7 @@ const Hero = () => {
       <div className="relative z-30 flex flex-col items-center justify-center h-full px-4 text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white leading-tight">
           {t("hero.title")} <br />
-          <span className="bg-gradient-to-r from-blue-800 to-cyan-700 text-transparent bg-clip-text">
-            Pelle&#39;s Automotive
-          </span>
+          <span>Pelle&#39;s Automotive</span>
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl mb-8 text-gray-300">
           {t("hero.description")}
