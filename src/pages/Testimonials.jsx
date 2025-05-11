@@ -24,7 +24,7 @@ const Testimonials = () => {
         <meta property="og:image" content="/logo.svg" />
         <meta
           property="og:url"
-          content="https://pellesautomotive.net/testimonials"
+          content="https://www.pellesautomotive.net/testimonials"
         />
       </Helmet>
 

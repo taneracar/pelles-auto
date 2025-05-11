@@ -37,7 +37,7 @@ const Services = () => {
         <meta property="og:image" content="/logo.svg" />
         <meta
           property="og:url"
-          content="https://pellesautomotive.net/services"
+          content="https://www.pellesautomotive.net/services"
         />
       </Helmet>
       <div className="bg-gray-50 py-12 px-4 md:px-16">

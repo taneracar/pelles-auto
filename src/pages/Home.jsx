@@ -18,7 +18,7 @@ const Home = () => {
           content={t("helmet.home.ogDescription")}
         />
         <meta property="og:image" content="/logo.svg" />
-        <meta property="og:url" content="https://pellesautomotive.net/" />
+        <meta property="og:url" content="https://www.pellesautomotive.net/" />
       </Helmet>
 
       <Hero />

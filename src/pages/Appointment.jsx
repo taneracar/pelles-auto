@@ -94,7 +94,7 @@ const Appointment = () => {
         <meta property="og:image" content="/logo.svg" />
         <meta
           property="og:url"
-          content="https://pellesautomotive.net/appointments"
+          content="https://www.pellesautomotive.net/appointments"
         />
       </Helmet>
       <div className="bg-white text-gray-900 min-h-screen flex items-center justify-center">

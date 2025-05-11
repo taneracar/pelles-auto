@@ -24,7 +24,7 @@ const Coupons = () => {
         <meta property="og:image" content="/logo.svg" />
         <meta
           property="og:url"
-          content="https://pellesautomotive.net/coupons"
+          content="https://www.pellesautomotive.net/coupons"
         />
       </Helmet>
       <div className="bg-gray-50 py-12 px-4 md:px-16">

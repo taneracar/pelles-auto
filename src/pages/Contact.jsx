@@ -71,7 +71,7 @@ const Contact = () => {
         <meta property="og:image" content="/logo.svg" />
         <meta
           property="og:url"
-          content="https://pellesautomotive.net/contact"
+          content="https://www.pellesautomotive.net/contact"
         />
       </Helmet>
       <div className="bg-gray-50 py-12 px-4 md:px-16">
