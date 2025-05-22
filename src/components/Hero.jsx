@@ -42,7 +42,7 @@ const Hero = () => {
           <motion.img
             key={currentIndex}
             src={heroImages[currentIndex]}
-            alt={`Slide ${currentIndex + 1}`}
+            alt={`Pelles auto hero image ${currentIndex + 1}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
