@@ -53,7 +53,7 @@ const HomeTestimonials = () => {
               {testimonials.map((testimonial, index) => (
                 <SwiperSlide key={index}>
                   <div className="bg-white w-full p-8 rounded-lg shadow-md text-left flex flex-col justify-between h-[350px]">
-                    <div>
+                    <div className="">
                       <div className="mb-10">
                         <VectorSVG />
                       </div>
