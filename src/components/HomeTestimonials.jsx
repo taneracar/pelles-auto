@@ -26,7 +26,7 @@ const HomeTestimonials = () => {
               </h2>
             </div>
           </div>
-          <div className="flex  md:flex-row justify-start items-center lg:justify-center gap-3 mt-4 lg:mt-0">
+          <div className="hidden lg:flex flex-row justify-start items-center  gap-3 mt-4 lg:mt-0">
             <div className="text-5xl font-bold text-yellow-500 mb-2 md:mb-0 md:mr-4">
               {t("testimonialsPage.overallRating.rating")}
             </div>
@@ -100,6 +100,16 @@ const HomeTestimonials = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
+          </div>
+        </div>
+        <div className="text-center mt-12 w-full">
+          <div className=" w-full flex lg:hidden flex-row justify-center items-center  gap-3 mt-4 ">
+            <div className="text-5xl font-bold text-yellow-500 mb-2 md:mb-0 md:mr-4">
+              {t("testimonialsPage.overallRating.rating")}
+            </div>
+            <div className="text-xl text-gray-700">
+              {t("testimonialsPage.overallRating.description")}
+            </div>
           </div>
         </div>
         <div className="text-center mt-12 w-full">
