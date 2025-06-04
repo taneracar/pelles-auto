@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import Hero from "../components/Hero";
 import AboutUs from "../components/AboutUs";
+import HomeTestimonials from "../components/HomeTestimonials";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -23,6 +24,7 @@ const Home = () => {
 
       <Hero />
       <AboutUs />
+      <HomeTestimonials />
     </>
   );
 };

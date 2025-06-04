@@ -215,6 +215,82 @@ const Contact = () => {
             </form>
           </div>
         </div>
+        {/* <div className="w-full h-fit lg:pb-[100px] relative">
+          <div className="h-full lg:h-[calc(100vh-162px)] flex flex-col gap-10 lg:flex-row">
+            <div className="lg:w-[40%] lg:gap-0 flex flex-col h-full">
+              <div className="w-full h-[45%]">
+                <div className="flex flex-col items-start justify-center gap-2 h-full">
+                  <h1 className="text-[34px] xl:text-[52px] lg:whitespace-nowrap w-[75%] font-gilroymid text-black">
+                    {ContactPageData?.title}
+                  </h1>
+                  <h2 className="text-[16px] xl:text-[20px] w-[75%] font-gilroyreg text-black">
+                    {ContactPageData?.description}
+                  </h2>
+                </div>
+              </div>{" "}
+              <div className="border-b border-black border-opacity-[0.16] my-6 lg:p-0"></div>
+              <div className="w-full h-[35%]">
+                <div className="flex flex-col items-start justify-center gap-6 h-full">
+                  {ContactPageData?.contactInfo?.map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex lg:gap-2 xl:gap-12 w-full text-black"
+                    >
+                      <div className="w-[100px] lg:text-[16px] xl:text-[18px] font-gilroyreg">
+                        {item?.title}
+                      </div>
+                      <div className="">:</div>
+                      <div className="w-[60%] lg:text-[16px] xl:text-[18px] font-gilroyreg">
+                        {item?.description}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="border-b border-black border-opacity-[0.16] my-6 lg:p-0"></div>
+            </div>
+            <div className="lg:hidden flex lg:w-[55%] relative w-full h-full lg:h-[calc(100vh-108px)]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3495.5261392946522!2d28.807188656269524!3d41.05200980734718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa566d2256cc9%3A0xd079277482592417!2sHuzur%20Plastik!5e1!3m2!1str!2str!4v1746796167168!5m2!1str!2str"
+                width="100%"
+                height="800px"
+                style={{ border: 0, filter: "grayscale(80%)" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <div
+                className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 bg-white/95 backdrop-blur-[1px]"
+                style={{
+                  WebkitMaskImage:
+                    "radial-gradient(circle at center, transparent 1px, black 500px)",
+                  maskImage:
+                    "radial-gradient(circle at center, transparent 1px, black 450px)",
+                }}
+              ></div>
+            </div>
+          </div>
+          <div className="hidden lg:flex lg:w-[55%] w-full h-1/2 lg:h-[calc(100vh-108px)] p-2 absolute bottom-0 lg:top-[108px] lg:right-0">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3495.5261392946522!2d28.807188656269524!3d41.05200980734718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa566d2256cc9%3A0xd079277482592417!2sHuzur%20Plastik!5e1!3m2!1str!2str!4v1746796167168!5m2!1str!2str"
+              width="100%"
+              height="100%"
+              style={{ border: 0, filter: "grayscale(80%)" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div
+              className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 bg-white/95 backdrop-blur-[1px]"
+              style={{
+                WebkitMaskImage:
+                  "radial-gradient(circle at center, transparent 1px, black 500px)",
+                maskImage:
+                  "radial-gradient(circle at center, transparent 1px, black 450px)",
+              }}
+            ></div>
+          </div>
+        </div> */}
       </div>
     </>
   );
