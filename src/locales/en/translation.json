@@ -109,7 +109,8 @@
     "emailPlaceholder": "Enter your email address",
     "submitButton": "Submit",
     "successMessage": "Appointment request sent successfully!",
-    "errorMessage": "There was an error sending the appointment request."
+    "errorMessage": "There was an error sending the appointment request.",
+    "submitting": "Submitting..."
   },
   "contact": {
     "title": "Contact Us",
@@ -128,7 +129,8 @@
     "messageLabel": "Your Message",
     "submitButton": "Send Message",
     "successMessage": "Your message has been sent successfully!",
-    "errorMessage": "There was an error sending your message."
+    "errorMessage": "There was an error sending your message.",
+    "submitting": "Submitting..."
   },
   "coupons": {
     "title": "Special Coupons",

@@ -2,9 +2,12 @@ import { useState } from "react";
 import emailjs from "emailjs-com";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Appointment = () => {
   const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     date: "",
     time: "",
@@ -16,27 +19,20 @@ const Appointment = () => {
     phone: "",
     email: "",
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     const userID = "YThWb8XnZh2iYVXjp";
     const templateID = "template_8z4igzq";
-
-    const emailContent = {
-      date: formData.date,
-      time: formData.time,
-      service: formData.service,
-      firstName: formData.firstName,
-      lastName: formData.lastName,
-      vehicle: formData.vehicle,
-      contactMethod: formData.contactMethod,
-      phone: formData.phone,
-      email: formData.email,
-    };
+    const emailContent = { ...formData };
 
     emailjs.send("service_n6hzr1o", templateID, emailContent, userID).then(
       () => {
-        alert(t("appointment.successMessage"));
+        toast.success(t("appointment.successMessage"));
         setFormData({
           date: "",
           time: "",
@@ -48,10 +44,12 @@ const Appointment = () => {
           phone: "",
           email: "",
         });
+        setIsSubmitting(false);
       },
       (error) => {
         console.error("Error sending email:", error);
-        alert(t("appointment.errorMessage"));
+        toast.error(t("appointment.errorMessage"));
+        setIsSubmitting(false);
       }
     );
   };
@@ -97,13 +95,25 @@ const Appointment = () => {
           content="https://www.pellesautomotive.net/appointments"
         />
       </Helmet>
+
+      {/* Toastify container */}
+      <ToastContainer
+        position="top-right"
+        autoClose={4000}
+        hideProgressBar={false}
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+
       <div className="bg-white text-gray-900 min-h-screen flex items-center justify-center">
         <div className="bg-gray-200 text-gray-900 p-8 rounded-lg shadow-lg max-w-3xl w-full lg:max-w-5xl m-2">
           <h1 className="text-2xl font-bold mb-4 text-center">
             {t("appointment.shopHoursTitle")}
           </h1>
           <p className="text-lg mb-6 text-center">
-            {" "}
             {t("contact.shopHoursWD")}
             <br />
             {t("contact.shopHoursWE")}
@@ -114,6 +124,7 @@ const Appointment = () => {
           </h2>
 
           <form className="space-y-6" onSubmit={handleSubmit}>
+            {/* Date */}
             <div className="flex flex-col">
               <label htmlFor="date" className="font-medium">
                 {t("appointment.dateLabel")}
@@ -129,6 +140,7 @@ const Appointment = () => {
               />
             </div>
 
+            {/* Time */}
             <div className="flex flex-col">
               <label htmlFor="time" className="font-medium">
                 {t("appointment.timeLabel")}
@@ -150,6 +162,7 @@ const Appointment = () => {
               </select>
             </div>
 
+            {/* Service */}
             <div className="flex flex-col">
               <label htmlFor="service" className="font-medium">
                 {t("appointment.serviceLabel")}
@@ -170,6 +183,7 @@ const Appointment = () => {
               {t("appointment.contactInfoTitle")}
             </h3>
 
+            {/* First Name */}
             <div className="flex flex-col">
               <label htmlFor="firstName" className="font-medium">
                 {t("appointment.firstNameLabel")}
@@ -186,6 +200,7 @@ const Appointment = () => {
               />
             </div>
 
+            {/* Last Name */}
             <div className="flex flex-col">
               <label htmlFor="lastName" className="font-medium">
                 {t("appointment.lastNameLabel")}
@@ -202,6 +217,7 @@ const Appointment = () => {
               />
             </div>
 
+            {/* Vehicle */}
             <div className="flex flex-col">
               <label htmlFor="vehicle" className="font-medium">
                 {t("appointment.vehicleLabel")}
@@ -218,6 +234,7 @@ const Appointment = () => {
               />
             </div>
 
+            {/* Contact Method */}
             <div className="flex flex-col">
               <label htmlFor="contactMethod" className="font-medium">
                 {t("appointment.contactMethodLabel")}
@@ -241,6 +258,7 @@ const Appointment = () => {
               </select>
             </div>
 
+            {/* Phone */}
             <div className="flex flex-col">
               <label htmlFor="phone" className="font-medium">
                 {t("appointment.phoneLabel")}
@@ -257,6 +275,7 @@ const Appointment = () => {
               />
             </div>
 
+            {/* Email */}
             <div className="flex flex-col">
               <label htmlFor="email" className="font-medium">
                 {t("appointment.emailLabel")}
@@ -273,11 +292,19 @@ const Appointment = () => {
               />
             </div>
 
+            {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer"
+              disabled={isSubmitting}
+              className={`w-full text-white py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer transition-all ${
+                isSubmitting
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-blue-500 hover:bg-blue-600"
+              }`}
             >
-              {t("appointment.submitButton")}
+              {isSubmitting
+                ? t("appointment.submitting")
+                : t("appointment.submitButton")}
             </button>
           </form>
         </div>

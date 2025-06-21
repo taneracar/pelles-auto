@@ -110,7 +110,8 @@
     "emailPlaceholder": "Ingrese su dirección de correo electrónico",
     "submitButton": "Enviar",
     "successMessage": "¡Solicitud de cita enviada exitosamente!",
-    "errorMessage": "Hubo un error al enviar la solicitud de cita."
+    "errorMessage": "Hubo un error al enviar la solicitud de cita.",
+    "submitting": "Enviando..."
   },
   "contact": {
     "title": "Contáctanos",
@@ -129,7 +130,8 @@
     "messageLabel": "Tu mensaje",
     "submitButton": "Enviar mensaje",
     "successMessage": "¡Tu mensaje ha sido enviado con éxito!",
-    "errorMessage": "Hubo un error al enviar tu mensaje."
+    "errorMessage": "Hubo un error al enviar tu mensaje.",
+    "submitting": "Enviando..."
   },
   "coupons": {
     "title": "Cupones Especiales",
