@@ -77,7 +77,6 @@ const Contact = () => {
         />
       </Helmet>
 
-      {/* Toastify Container */}
       <ToastContainer
         position="top-right"
         autoClose={4000}

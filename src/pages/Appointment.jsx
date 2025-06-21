@@ -96,7 +96,6 @@ const Appointment = () => {
         />
       </Helmet>
 
-      {/* Toastify container */}
       <ToastContainer
         position="top-right"
         autoClose={4000}
@@ -108,207 +107,282 @@ const Appointment = () => {
         theme="light"
       />
 
-      <div className="bg-white text-gray-900 min-h-screen flex items-center justify-center">
-        <div className="bg-gray-200 text-gray-900 p-8 rounded-lg shadow-lg max-w-3xl w-full lg:max-w-5xl m-2">
-          <h1 className="text-2xl font-bold mb-4 text-center">
-            {t("appointment.shopHoursTitle")}
+      <section className="min-h-screen bg-gradient-to-b from-white to-gray-100 py-16 px-4 flex items-center justify-center">
+        <div className="w-full max-w-5xl bg-white shadow-2xl rounded-3xl p-10 md:p-16">
+          <h1 className="text-center text-4xl font-bold text-gray-900 mb-4">
+            {t("appointment.scheduleTitle")}
           </h1>
-          <p className="text-lg mb-6 text-center">
+          <p className="text-center text-lg text-gray-600 mb-10">
+            {t("appointment.shopHoursTitle")}
+            <br />
             {t("contact.shopHoursWD")}
             <br />
             {t("contact.shopHoursWE")}
           </p>
 
-          <h2 className="text-xl font-bold mb-4 text-center">
-            {t("appointment.scheduleTitle")}
-          </h2>
+          <form
+            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            onSubmit={handleSubmit}
+          >
+            <div className="space-y-6">
+              <div className="relative flex flex-col">
+                <label
+                  htmlFor="date"
+                  className="block font-medium text-gray-700"
+                >
+                  {t("appointment.dateLabel")}
+                </label>
+                <input
+                  type="date"
+                  id="date"
+                  name="date"
+                  className="mt-1 w-full rounded-xl border border-gray-300 p-3 text-gray-900 focus:ring-2 focus:ring-blue-500 "
+                  value={formData.date}
+                  onChange={handleChange}
+                  required
+                />
+                <div className="pointer-events-none absolute top-10 z-10  right-4 text-gray-400 select-none ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <rect
+                      x="3"
+                      y="4"
+                      width="18"
+                      height="18"
+                      rx="2"
+                      ry="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <line
+                      x1="16"
+                      y1="2"
+                      x2="16"
+                      y2="6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <line
+                      x1="8"
+                      y1="2"
+                      x2="8"
+                      y2="6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <line
+                      x1="3"
+                      y1="10"
+                      x2="21"
+                      y2="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
 
-          <form className="space-y-6" onSubmit={handleSubmit}>
-            {/* Date */}
-            <div className="flex flex-col">
-              <label htmlFor="date" className="font-medium">
-                {t("appointment.dateLabel")}
-              </label>
-              <input
-                type="date"
-                id="date"
-                name="date"
-                className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                value={formData.date}
-                onChange={handleChange}
-                required
-              />
+              <div className="relative">
+                <label
+                  htmlFor="time"
+                  className="block font-medium text-gray-700"
+                >
+                  {t("appointment.timeLabel")}
+                </label>
+                <select
+                  id="time"
+                  name="time"
+                  value={formData.time}
+                  onChange={handleChange}
+                  required
+                  className="mt-1 w-full rounded-xl border border-gray-300 p-3 pr-10 text-gray-900 focus:ring-2 focus:ring-blue-500 appearance-none"
+                >
+                  <option value="">{t("appointment.selectTime")}</option>
+                  {generateTimeOptions().map((time, index) => (
+                    <option key={index} value={time}>
+                      {time}
+                    </option>
+                  ))}
+                </select>
+                <div className="absolute top-11 right-3 pointer-events-none text-gray-400 select-none text-xl">
+                  ▼
+                </div>
+              </div>
+
+              <div>
+                <label
+                  htmlFor="service"
+                  className="block font-medium text-gray-700"
+                >
+                  {t("appointment.serviceLabel")}
+                </label>
+                <input
+                  type="text"
+                  id="service"
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  required
+                  placeholder={t("appointment.servicePlaceholder")}
+                  className="mt-1 w-full rounded-xl border border-gray-300 p-3 text-gray-900 focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
             </div>
 
-            {/* Time */}
-            <div className="flex flex-col">
-              <label htmlFor="time" className="font-medium">
-                {t("appointment.timeLabel")}
-              </label>
-              <select
-                id="time"
-                name="time"
-                className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                value={formData.time}
-                onChange={handleChange}
-                required
-              >
-                <option value="">{t("appointment.selectTime")}</option>
-                {generateTimeOptions().map((time, index) => (
-                  <option key={index} value={time}>
-                    {time}
+            <div className="space-y-6">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label
+                    htmlFor="firstName"
+                    className="block font-medium text-gray-700"
+                  >
+                    {t("appointment.firstNameLabel")}
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    required
+                    placeholder={t("appointment.firstNamePlaceholder")}
+                    className="mt-1 w-full rounded-xl border border-gray-300 p-3 text-gray-900 focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="lastName"
+                    className="block font-medium text-gray-700"
+                  >
+                    {t("appointment.lastNameLabel")}
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    required
+                    placeholder={t("appointment.lastNamePlaceholder")}
+                    className="mt-1 w-full rounded-xl border border-gray-300 p-3 text-gray-900 focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  htmlFor="vehicle"
+                  className="block font-medium text-gray-700"
+                >
+                  {t("appointment.vehicleLabel")}
+                </label>
+                <input
+                  type="text"
+                  id="vehicle"
+                  name="vehicle"
+                  value={formData.vehicle}
+                  onChange={handleChange}
+                  required
+                  placeholder={t("appointment.vehiclePlaceholder")}
+                  className="mt-1 w-full rounded-xl border border-gray-300 p-3 text-gray-900 focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="contactMethod"
+                  className="block font-medium text-gray-700"
+                >
+                  {t("appointment.contactMethodLabel")}
+                </label>
+                <select
+                  id="contactMethod"
+                  name="contactMethod"
+                  value={formData.contactMethod}
+                  onChange={handleChange}
+                  required
+                  className="mt-1 w-full rounded-xl border border-gray-300 p-3 pr-10 text-gray-900 focus:ring-2 focus:ring-blue-500 appearance-none "
+                >
+                  <option value="">{t("appointment.selectMethod")}</option>
+                  <option value="any">
+                    {t("appointment.contactMethodAny")}
                   </option>
-                ))}
-              </select>
+                  <option value="phone">
+                    {t("appointment.contactMethodPhone")}
+                  </option>
+                  <option value="email">
+                    {t("appointment.contactMethodEmail")}
+                  </option>
+                </select>
+                <div className="absolute top-11 right-3 pointer-events-none text-gray-400 select-none text-xl">
+                  ▼
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4 relative">
+                <div>
+                  <label
+                    htmlFor="phone"
+                    className="block font-medium text-gray-700"
+                  >
+                    {t("appointment.phoneLabel")}
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    placeholder={t("appointment.phonePlaceholder")}
+                    className="mt-1 w-full rounded-xl border border-gray-300 p-3 text-gray-900 focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block font-medium text-gray-700"
+                  >
+                    {t("appointment.emailLabel")}
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    placeholder={t("appointment.emailPlaceholder")}
+                    className="mt-1 w-full rounded-xl border border-gray-300 p-3 text-gray-900 focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              </div>
             </div>
 
-            {/* Service */}
-            <div className="flex flex-col">
-              <label htmlFor="service" className="font-medium">
-                {t("appointment.serviceLabel")}
-              </label>
-              <input
-                type="text"
-                id="service"
-                name="service"
-                className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder={t("appointment.servicePlaceholder")}
-                value={formData.service}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <h3 className="text-xl font-bold text-center">
-              {t("appointment.contactInfoTitle")}
-            </h3>
-
-            {/* First Name */}
-            <div className="flex flex-col">
-              <label htmlFor="firstName" className="font-medium">
-                {t("appointment.firstNameLabel")}
-              </label>
-              <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder={t("appointment.firstNamePlaceholder")}
-                value={formData.firstName}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            {/* Last Name */}
-            <div className="flex flex-col">
-              <label htmlFor="lastName" className="font-medium">
-                {t("appointment.lastNameLabel")}
-              </label>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder={t("appointment.lastNamePlaceholder")}
-                value={formData.lastName}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            {/* Vehicle */}
-            <div className="flex flex-col">
-              <label htmlFor="vehicle" className="font-medium">
-                {t("appointment.vehicleLabel")}
-              </label>
-              <input
-                type="text"
-                id="vehicle"
-                name="vehicle"
-                className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder={t("appointment.vehiclePlaceholder")}
-                value={formData.vehicle}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            {/* Contact Method */}
-            <div className="flex flex-col">
-              <label htmlFor="contactMethod" className="font-medium">
-                {t("appointment.contactMethodLabel")}
-              </label>
-              <select
-                id="contactMethod"
-                name="contactMethod"
-                className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                value={formData.contactMethod}
-                onChange={handleChange}
-                required
+            <div className="md:col-span-2">
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className={`w-full py-4 rounded-xl font-bold text-white text-lg transition-all duration-300 cursor-pointer ${
+                  isSubmitting
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-blue-600 hover:bg-blue-700"
+                }`}
               >
-                <option value="">{t("appointment.selectMethod")}</option>
-                <option value="any">{t("appointment.contactMethodAny")}</option>
-                <option value="phone">
-                  {t("appointment.contactMethodPhone")}
-                </option>
-                <option value="email">
-                  {t("appointment.contactMethodEmail")}
-                </option>
-              </select>
+                {isSubmitting
+                  ? t("appointment.submitting")
+                  : t("appointment.submitButton")}
+              </button>
             </div>
-
-            {/* Phone */}
-            <div className="flex flex-col">
-              <label htmlFor="phone" className="font-medium">
-                {t("appointment.phoneLabel")}
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder={t("appointment.phonePlaceholder")}
-                value={formData.phone}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            {/* Email */}
-            <div className="flex flex-col">
-              <label htmlFor="email" className="font-medium">
-                {t("appointment.emailLabel")}
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder={t("appointment.emailPlaceholder")}
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            {/* Submit Button */}
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className={`w-full text-white py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer transition-all ${
-                isSubmitting
-                  ? "bg-gray-400 cursor-not-allowed"
-                  : "bg-blue-500 hover:bg-blue-600"
-              }`}
-            >
-              {isSubmitting
-                ? t("appointment.submitting")
-                : t("appointment.submitButton")}
-            </button>
           </form>
         </div>
-      </div>
+      </section>
     </>
   );
 };
