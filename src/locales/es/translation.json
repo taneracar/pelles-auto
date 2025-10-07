@@ -1,10 +1,10 @@
 {
   "helmet": {
     "home": {
-      "title": "Inicio | Pelles Auto",
-      "description": "Pelles Auto ofrece servicios confiables de mantenimiento y reparación de automóviles. Reserva tu cita hoy mismo.",
-      "ogTitle": "Inicio | Pelles Auto",
-      "ogDescription": "Servicio confiable de mantenimiento y reparación de automóviles."
+      "title": "Pelles Auto | Reparación de Autos de Confianza en Malvern, PA",
+      "description": "Durante más de 20 años, Pelles Auto ha ofrecido servicios de reparación de autos honestos, profesionales y asequibles en Malvern, PA. Confiado por los conductores locales para inspecciones, neumáticos y mantenimiento.",
+      "ogTitle": "Pelles Auto | Servicio y Mantenimiento de Autos Fiable en Malvern",
+      "ogDescription": "Reparación y mantenimiento de autos honestos y profesionales en Malvern, PA — confiado por la comunidad durante más de 20 años."
     },
     "appointments": {
       "title": "Citas | Pelles Auto",
