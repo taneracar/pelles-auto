@@ -78,7 +78,7 @@ const Navbar = () => {
             { name: t("navbar.appointments"), path: "/appointments" },
             { name: t("navbar.contact"), path: "/contact_us" },
             // { name: t("navbar.testimonials"), path: "/testimonials" },
-            { name: t("navbar.coupons"), path: "/coupons" },
+            //{ name: t("navbar.coupons"), path: "/coupons" },
           ].map((link) => (
             <li key={link.name}>
               <Link
@@ -122,7 +122,6 @@ const Navbar = () => {
             { name: t("navbar.appointments"), path: "/appointments" },
             { name: t("navbar.contact"), path: "/contact_us" },
             //{ name: t("navbar.testimonials"), path: "/testimonials" },
-            { name: t("navbar.coupons"), path: "/coupons" },
           ].map((link) => (
             <Link
               key={link.name}
