@@ -54,8 +54,28 @@ const Appointment = () => {
     );
   };
 
+  const formatLocalDate = (date) => {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  };
+
+  const isWeekend = (value) => {
+    const day = new Date(`${value}T00:00:00`).getDay();
+    return day === 0 || day === 6;
+  };
+
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+
+    if (name === "date" && value && isWeekend(value)) {
+      toast.error("We are closed on weekends. Please select a weekday.");
+      setFormData({ ...formData, date: "" });
+      return;
+    }
+
+    setFormData({ ...formData, [name]: value });
   };
 
   const generateTimeOptions = () => {
@@ -71,6 +91,17 @@ const Appointment = () => {
     }
     return times;
   };
+
+  const getNextMonday = (fromDate) => {
+    const day = fromDate.getDay(); // 0=Sun..6=Sat
+    const daysUntilMonday = (8 - day) % 7 || 7;
+    const nextMonday = new Date(fromDate);
+    nextMonday.setDate(fromDate.getDate() + daysUntilMonday);
+    return nextMonday;
+  };
+
+  // Disallow booking before the upcoming Monday.
+  const minDateValue = formatLocalDate(getNextMonday(new Date()));
 
   return (
     <>
@@ -98,7 +129,7 @@ const Appointment = () => {
 
       <ToastContainer
         position="top-right"
-        autoClose={4000}
+        autoClose={5000}
         hideProgressBar={false}
         closeOnClick
         pauseOnFocusLoss
@@ -107,7 +138,7 @@ const Appointment = () => {
         theme="light"
       />
 
-      <section className="min-h-screen bg-gradient-to-b from-white to-gray-100 py-16 px-4 flex items-center justify-center">
+      <section className="min-h-screen bg-gradient-to-b from-white to-gray-100 py-16 sm:px-4 flex items-center justify-center">
         <div className="w-full max-w-5xl bg-white shadow-2xl rounded-3xl p-10 md:p-16">
           <h1 className="text-center text-4xl font-bold text-gray-900 mb-4">
             {t("appointment.scheduleTitle")}
@@ -136,12 +167,13 @@ const Appointment = () => {
                   type="date"
                   id="date"
                   name="date"
-                  className="mt-1 w-full rounded-xl border border-gray-300 p-3 text-gray-900 focus:ring-2 focus:ring-blue-500 "
+                  className="mt-1 sm:w-full rounded-xl border border-gray-300 p-3 text-gray-900 focus:ring-2 focus:ring-blue-500 "
                   value={formData.date}
                   onChange={handleChange}
+                  min={minDateValue}
                   required
                 />
-                <div className="pointer-events-none absolute top-10 z-10  right-4 text-gray-400 select-none ">
+                <div className="pointer-events-none absolute top-10 z-10 right-2 sm:right-4 text-gray-400 select-none">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
