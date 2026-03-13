@@ -108,7 +108,7 @@
     "emailLabel": "Email:",
     "emailPlaceholder": "Enter your email address",
     "submitButton": "Submit",
-    "successMessage": "Appointment request sent successfully! We will contact you to confirm the date and time. If we don't contact you within 24 hours, please call us directly.",
+    "successMessage": "Appointment request sent successfully! If we don't contact you within 24 hours, please call us directly.",
     "errorMessage": "There was an error sending the appointment request.",
     "submitting": "Submitting..."
   },
