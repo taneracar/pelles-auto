@@ -92,10 +92,16 @@ const Appointment = () => {
     return times;
   };
 
-  // Disallow booking within the next 7 days.
-  const minDate = new Date();
-  minDate.setDate(minDate.getDate() + 7);
-  const minDateValue = formatLocalDate(minDate);
+  const getNextMonday = (fromDate) => {
+    const day = fromDate.getDay(); // 0=Sun..6=Sat
+    const daysUntilMonday = (8 - day) % 7 || 7;
+    const nextMonday = new Date(fromDate);
+    nextMonday.setDate(fromDate.getDate() + daysUntilMonday);
+    return nextMonday;
+  };
+
+  // Disallow booking before the upcoming Monday.
+  const minDateValue = formatLocalDate(getNextMonday(new Date()));
 
   return (
     <>
