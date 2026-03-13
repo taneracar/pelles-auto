@@ -109,7 +109,7 @@
     "emailLabel": "Correo electrónico:",
     "emailPlaceholder": "Ingrese su dirección de correo electrónico",
     "submitButton": "Enviar",
-    "successMessage": "¡Solicitud de cita enviada exitosamente!",
+    "successMessage": "¡Solicitud de cita enviada exitosamente! Nos comunicaremos contigo para confirmar la fecha y la hora. Si no nos comunicamos contigo dentro de 24 horas, por favor llámanos directamente.",
     "errorMessage": "Hubo un error al enviar la solicitud de cita.",
     "submitting": "Enviando..."
   },
