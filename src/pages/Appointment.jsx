@@ -210,6 +210,8 @@ const Appointment = () => {
                   onChange={handleDateChange}
                   onChangeRaw={(event) => event.preventDefault()}
                   minDate={minSelectableDate}
+                  openToDate={minSelectableDate}
+                  showDisabledMonthNavigation
                   filterDate={(date) => !isWeekendDate(date)}
                   dateFormat="MM/dd/yyyy"
                   required
