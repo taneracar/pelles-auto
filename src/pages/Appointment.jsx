@@ -3,7 +3,9 @@ import emailjs from "emailjs-com";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { ToastContainer, toast } from "react-toastify";
+import DatePicker from "react-datepicker";
 import "react-toastify/dist/ReactToastify.css";
+import "react-datepicker/dist/react-datepicker.css";
 
 const Appointment = () => {
   const { t } = useTranslation();
@@ -21,9 +23,25 @@ const Appointment = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [selectedDate, setSelectedDate] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!formData.date) {
+      toast.error("Please select a valid appointment date.");
+      return;
+    }
+
+    if (isWeekend(formData.date)) {
+      toast.error("We are closed on weekends. Please select a weekday.");
+      return;
+    }
+
+    if (formData.date < minDateValue) {
+      toast.error("Please select a date on or after the next Monday.");
+      return;
+    }
+
     setIsSubmitting(true);
 
     const userID = "YThWb8XnZh2iYVXjp";
@@ -68,13 +86,6 @@ const Appointment = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    if (name === "date" && value && isWeekend(value)) {
-      toast.error("We are closed on weekends. Please select a weekday.");
-      setFormData({ ...formData, date: "" });
-      return;
-    }
-
     setFormData({ ...formData, [name]: value });
   };
 
@@ -100,8 +111,36 @@ const Appointment = () => {
     return nextMonday;
   };
 
+  const isWeekendDate = (date) => {
+    const day = date.getDay();
+    return day === 0 || day === 6;
+  };
+
   // Disallow booking before the upcoming Monday.
-  const minDateValue = formatLocalDate(getNextMonday(new Date()));
+  const minSelectableDate = getNextMonday(new Date());
+  const minDateValue = formatLocalDate(minSelectableDate);
+
+  const handleDateChange = (date) => {
+    if (!date) {
+      setSelectedDate(null);
+      setFormData({ ...formData, date: "" });
+      return;
+    }
+
+    if (isWeekendDate(date)) {
+      toast.error("We are closed on weekends. Please select a weekday.");
+      return;
+    }
+
+    const formattedDate = formatLocalDate(date);
+    if (formattedDate < minDateValue) {
+      toast.error("Please select a date on or after the next Monday.");
+      return;
+    }
+
+    setSelectedDate(date);
+    setFormData({ ...formData, date: formattedDate });
+  };
 
   return (
     <>
@@ -163,14 +202,18 @@ const Appointment = () => {
                 >
                   {t("appointment.dateLabel")}
                 </label>
-                <input
-                  type="date"
+                <DatePicker
                   id="date"
                   name="date"
-                  className="mt-1 sm:w-full rounded-xl border border-gray-300 p-3 text-gray-900 focus:ring-2 focus:ring-blue-500 "
-                  value={formData.date}
-                  onChange={handleChange}
-                  min={minDateValue}
+                  className="mt-1 w-full rounded-xl border border-gray-300 p-3 text-gray-900 focus:ring-2 focus:ring-blue-500 "
+                  selected={selectedDate}
+                  onChange={handleDateChange}
+                  onChangeRaw={(event) => event.preventDefault()}
+                  minDate={minSelectableDate}
+                  openToDate={minSelectableDate}
+                  showDisabledMonthNavigation
+                  filterDate={(date) => !isWeekendDate(date)}
+                  dateFormat="MM/dd/yyyy"
                   required
                 />
                 <div className="pointer-events-none absolute top-10 z-10 right-2 sm:right-4 text-gray-400 select-none">
