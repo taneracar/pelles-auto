@@ -86,6 +86,7 @@
     "shopHoursTitle": "Shop Hours",
     "shopHours": "Monday-Friday: 8am-5pm\nSaturday-Sunday: Closed",
     "scheduleTitle": "Schedule Your Vehicle Drop-Off",
+    "dateNotice": "Appointments must be booked at least one week in advance. We're closed on weekends.",
     "dateLabel": "Date (MM/DD/YYYY):",
     "timeLabel": "Time:",
     "selectTime": "Select Time",
