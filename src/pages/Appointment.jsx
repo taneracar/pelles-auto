@@ -38,7 +38,7 @@ const Appointment = () => {
     }
 
     if (formData.date < minDateValue) {
-      toast.error("Please select a date on or after the next Monday.");
+      toast.error("Appointments must be booked at least one week in advance.");
       return;
     }
 
@@ -103,12 +103,10 @@ const Appointment = () => {
     return times;
   };
 
-  const getNextMonday = (fromDate) => {
-    const day = fromDate.getDay(); // 0=Sun..6=Sat
-    const daysUntilMonday = (8 - day) % 7 || 7;
-    const nextMonday = new Date(fromDate);
-    nextMonday.setDate(fromDate.getDate() + daysUntilMonday);
-    return nextMonday;
+  const getOneWeekOut = (fromDate) => {
+    const oneWeekOut = new Date(fromDate);
+    oneWeekOut.setDate(fromDate.getDate() + 7);
+    return oneWeekOut;
   };
 
   const isWeekendDate = (date) => {
@@ -116,8 +114,18 @@ const Appointment = () => {
     return day === 0 || day === 6;
   };
 
-  // Disallow booking before the upcoming Monday.
-  const minSelectableDate = getNextMonday(new Date());
+  // If a weekend visit pushes the one-week-out date onto a Sat/Sun, roll
+  // forward to the following Monday so the min date is never a blocked day.
+  const rollForwardPastWeekend = (date) => {
+    const result = new Date(date);
+    while (isWeekendDate(result)) {
+      result.setDate(result.getDate() + 1);
+    }
+    return result;
+  };
+
+  // Disallow booking less than one week out (same weekday, next week).
+  const minSelectableDate = rollForwardPastWeekend(getOneWeekOut(new Date()));
   const minDateValue = formatLocalDate(minSelectableDate);
 
   const handleDateChange = (date) => {
@@ -134,7 +142,7 @@ const Appointment = () => {
 
     const formattedDate = formatLocalDate(date);
     if (formattedDate < minDateValue) {
-      toast.error("Please select a date on or after the next Monday.");
+      toast.error("Appointments must be booked at least one week in advance.");
       return;
     }
 
@@ -182,12 +190,15 @@ const Appointment = () => {
           <h1 className="text-center text-4xl font-bold text-gray-900 mb-4">
             {t("appointment.scheduleTitle")}
           </h1>
-          <p className="text-center text-lg text-gray-600 mb-10">
+          <p className="text-center text-lg text-gray-600 mb-4">
             {t("appointment.shopHoursTitle")}
             <br />
             {t("contact.shopHoursWD")}
             <br />
             {t("contact.shopHoursWE")}
+          </p>
+          <p className="text-center text-sm text-gray-500 mb-10">
+            {t("appointment.dateNotice")}
           </p>
 
           <form

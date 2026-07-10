@@ -87,6 +87,7 @@
     "shopHoursTitle": "Horarios de la tienda",
     "shopHours": "Lunes-Viernes: 8am-5pm\nSábado-Domingo: Cerrado",
     "scheduleTitle": "Agende su entrega de vehículo",
+    "dateNotice": "Las citas deben reservarse con al menos una semana de anticipación. Cerramos los fines de semana.",
     "dateLabel": "Fecha (DD/MM/AAAA):",
     "timeLabel": "Hora:",
     "selectTime": "Seleccionar hora",
